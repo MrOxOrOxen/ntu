@@ -1,0 +1,24 @@
+m = 1200;
+T_m = 200;
+w_m = 450;
+beta = 0.35;
+alpha = [40, 25, 16, 12, 10];
+g = 9.81;
+C_r = 0.01;
+rho = 1.3;
+C_d = 0.36;
+A = 2.2;
+
+alpha_1 = alpha(1);
+alpha_2 = alpha(2);
+alpha_3 = alpha(3);
+alpha_4 = alpha(4);
+alpha_5 = alpha(5);
+k_p = 0.08;
+k_i = 0.015;
+theta = 0;
+on_off = 0;
+set_decel = 0;
+resume_accel = 0;
+cancel = 0;
+ideal_v_r = 30;
