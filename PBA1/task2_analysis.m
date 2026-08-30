@@ -29,16 +29,46 @@ figure;
 hold on;
 
 plot(t, v, 'r-', 'LineWidth', 1.8, 'DisplayName', 'v(t)');
+yline(v_5, 'k--', sprintf("v(5%%) = %.2f m/s", v_5), 'LineWidth', 1.5);
+yline(v_95, 'k--', sprintf("v(95%%) = %.2f m/s", v_95), 'LineWidth', 1.5);
+xline(t_5, 'k--', sprintf("t(5%%) = %.2f s", t_5), 'LineWidth', 1.5);
+xline(t_95, 'k--', sprintf("t(95%%) = %.2f s", t_95), 'LineWidth', 1.5);
+
+% ax = gca;
+% pos = ax.Position;
+% y_arrow = pos(2) - 0.05;
+% x1 = pos(1) + (t_5 - ax.XLim(1)) / diff(ax.XLim) * pos(3);
+% x2 = pos(1) + (t_95 - ax.XLim(1)) / diff(ax.XLim) * pos(3);
+% annotation('doublearrow', [x1, x2], [y_arrow, y_arrow], 'Color', 'k', 'Linewidth', 0.8);
+% annotation('textbox', [(x1 + x2)/2-0.08, y_arrow-0.06, 0.16, 0.04], ...
+%     "String", sprintf("Rise Time: %.2f s", t_95 - t_5), ...
+%     'EdgeColor', 'none', 'HorizontalAlignment', 'center', 'VerticalAlignment', 'middle', ...
+%     'FontSize', 11, 'Color', 'k');
+
+y_arrow = 2;
+quiver((t_5 + t_95)/2, y_arrow, (t_95 - t_5)/2, 0, 0, 'Color', 'k', 'LineWidth', 0.8, ...
+    'MaxHeadSize', 0.5, 'HandleVisibility', 'off');
+quiver((t_5 + t_95)/2, y_arrow, -(t_95 - t_5)/2, 0, 0, 'Color', 'k', 'LineWidth', 0.8, ...
+    'MaxHeadSize', 0.5, 'HandleVisibility', 'off');
+text((t_5 + t_95)/2, y_arrow + 0.3, ...
+    sprintf('Rise Time: %.2f s', t_95 - t_5), ...
+    'FontSize', 11, 'HorizontalAlignment', 'center', ...
+    'VerticalAlignment', 'bottom', 'Color', 'k');
 
 xlabel('Time (s)', 'FontSize', 13, 'Color', 'k');
 ylabel('Speed (m/s)', 'FontSize', 13);
 title('Task 2: Velocity of Open-loop Control', 'FontSize', 14, 'Color', 'k');
+
+lgd = legend('v(t)', 'Location', 'best');
+lgd.Color = 'w';
+lgd.TextColor = 'k';
+lgd.EdgeColor = 'k';
 set(gcf, 'Color', 'w');
 set(gca, 'Color', 'w', 'XColor', 'k', 'YColor', 'k', 'GridColor', [0.5, 0.5, 0.5]);
 
 grid on;
 box on;
-xlim([0, 70]);
+xlim([0, 40]);
 ylim([0, 40]);
 
 print(gcf, 'task2/task2.png', '-dpng', '-r300');

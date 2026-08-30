@@ -2,10 +2,11 @@ fprintf("### TASK 3 ###\n");
 fprintf("Gear: 3\n");
 fprintf("Road slope: %f deg\n", theta)
 fprintf("K_p: %.3f\n", k_p);
-fprintf("K_i: %.3f\n", k_i);
+fprintf("K_i: %.4f\n", k_i);
 
 t = out.v_out.time;
 v = out.v_out.signals.values;
+v_ref = out.v_ref_out.signals.values;
 
 % v_stable = v(end);
 v_stable = mean(v(round(0.95 * end) : end));
@@ -16,7 +17,7 @@ v_start = 20;
 fprintf("Steady-state speed: %f m/s\n", v_stable);
 fprintf("Max speed: %f m/s\n", v_max);
 
-overshoot = (v_max - v_stable) / v_stable * 100;
+overshoot = (v_max - 30) / 30 * 100;
 fprintf("Overshoot: %f %%\n", overshoot);
 
 v_5 = v_start + 0.05 * (v_stable - v_start);
@@ -30,33 +31,38 @@ t_95 = t(idx_95);
 t_r = t_95 - t_5;
 fprintf("Rise time: %.2f s\n", t_r)
 
-band = 0.05 * v_stable;
-in_band = (v <= v_stable + band) & (v >= v_stable - band);
+band = 0.05 * 30;
+in_band = (v <= 30 + band) & (v >= 30 - band);
 idx_settling = find(~in_band, 1, 'last');
 
-if isempty(idx_settling)
+if isempty(idx_settling) || idx_settling == length(t)
     t_s_5 = 0;
 else
-    t_s_5 = t(idx_settling);
+    t_s_5 = t(idx_settling) - 10;
 end
 fprintf("Settling Time (5%%): %.2f s\n", t_s_5)
 
-band = 0.02 * v_stable;
-in_band = (v <= v_stable + band) & (v >= v_stable - band);
+band = 0.02 * 30;
+in_band = (v <= 30 + band) & (v >= 30 - band);
 idx_settling = find(~in_band, 1, 'last');
 
-if isempty(idx_settling)
+if isempty(idx_settling) || idx_settling == length(t)
     t_s_2 = 0;
 else
-    t_s_2 = t(idx_settling);
+    t_s_2 = t(idx_settling) - 10;
 end
 fprintf("Settling Time (2%%): %.2f s\n", t_s_2)
 
 figure;
 hold on;
 
-plot(t, v, 'r-', 'LineWidth', 1.8, 'DisplayName', 'v(t)');
-% plot([t(1), t(end)], [v_stable, v_stable], 'r--', 'LineWidth', 0.8);
+% plot(t, 30, 'k--', 'LineWidth', 1.5, 'DisplayName', 'Reference Speed v_r(t)');
+plot(t, v_ref, '-', 'LineWidth', 1.8, 'DisplayName', 'Reference Speed v_r(t)', 'Color', [1, 0.45, 0.1]);
+plot(t, v, 'r-', 'LineWidth', 1.8, 'DisplayName', 'Vehicle Speed v(t)');
+xline(10, 'k--', 'LineWidth', 1.5, 'DisplayName', 'Reference Step');
+% yline(20, 'k--', 'LineWidth', 1.5, 'DisplayName', 'Initial Velocity');
+% yline(30, 'k--', 'LineWidth', 1.5, 'DisplayName', 'Stable Velocity');
+% plot([t(1), t(end)], [30, 30], 'r--', 'LineWidth', 0.8);
 % plot([t(1), t(end)], [v_5, v_5], 'r:', 'LineWidth', 0.8);
 % plot([t(1), t(end)], [v_95, v_95], 'r:', 'LineWidth', 0.8);
 % 
@@ -68,32 +74,40 @@ plot(t, v, 'r-', 'LineWidth', 1.8, 'DisplayName', 'v(t)');
 
 xlabel('Time (s)', 'FontSize', 13);
 ylabel('Speed (m/s)', 'FontSize', 13);
-title(sprintf('Task 3: Velocity of Closed-loop PI Control (Kp=%.3f, Ki=%.3f)' , k_p, k_i), 'FontSize', 14, 'Color', 'k');
+title(sprintf('Task 3: Velocity of Closed-loop PI Control (Kp=%.3f, Ki=%.4f)' , k_p, k_i), 'FontSize', 14, 'Color', 'k');
+lgd = legend('Reference Speed v_r(t)', 'Vehicle Speed v(t)', 'Location', 'best');
+lgd.Color = 'w';
+lgd.TextColor = 'k';
+lgd.EdgeColor = 'k';
+
 set(gcf, 'Color', 'w');
 set(gca, 'Color', 'w', 'XColor', 'k', 'YColor', 'k', 'GridColor', [0.5, 0.5, 0.5]);
 
 grid on;
 box on;
-xlim([0, 70]);
-ylim([0, 40]);
+xlim([0, 80]);
+ylim([15, 40]);
 
-print(gcf, 'task3/task3.png', '-dpng', '-r300');
+filename = sprintf('task3/task3_kp_%.3f_ki_%.4f.png', k_p, k_i);
+print(gcf, filename, '-dpng', '-r300');
 
 headers = {
-    'K_p', 'K_i', 'Steady-state speed (m/s)', 'Max speed (m/s)', 'Overshoot (%)', ...
+    'K_p', 'K_i', 'Actual Steady-state speed (m/s)', 'Max speed (m/s)', 'Overshoot (%)', ...
     'Rise time (s)', '5% Settling Time (s)', '2% Settling Time (s)'
 };
 data = num2cell([k_p, k_i, v_stable, v_max, overshoot, t_r, t_s_5, t_s_2]);
+
+kp_column = k_p * ones(size(t));
+ki_column = k_i * ones(size(t));
+headers_raw = {'K_p', 'K_i', 'Time (s)', 'v (m/s)'};
+data_raw = num2cell([kp_column, ki_column, t, v]);
+
 % writecell([headers; data], 'task3.xlsx', 'Sheet', 'Summary');
 if ~isfile('task3/task3.xlsx')
     writecell([headers; data], 'task3/task3.xlsx', 'Sheet', 'Summary');
     writecell([headers_raw; data_raw], 'task3/task3.xlsx', 'Sheet', 'Raw');
 else
     writecell(data, 'task3/task3.xlsx', 'Sheet', 'Summary', 'WriteMode', 'append');
+    writecell(data_raw, 'task3/task3.xlsx', 'Sheet', 'Raw', 'WriteMode', 'append');
 end
 
-kp_column = k_p * ones(size(t));
-ki_column = k_i * ones(size(t));
-headers_raw = {'K_p', 'K_i', 'Time (s)', 'v (m/s)'};
-data_raw = num2cell([kp_column, ki_column, t, v]);
-writecell(data_raw, 'task3/task3.xlsx', 'Sheet', 'Raw', 'WriteMode', 'append');
