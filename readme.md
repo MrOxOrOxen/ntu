@@ -1,5 +1,3 @@
-This repo stores the assignments and projects of my M.Sc. Robotics and Intelligent Systems in NTU.
-
 # MA6217 Advanced Linear Systems and Control
 
 ## PBA1
