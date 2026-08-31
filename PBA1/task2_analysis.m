@@ -71,12 +71,12 @@ box on;
 xlim([0, 40]);
 ylim([0, 40]);
 
-print(gcf, 'task2/task2.png', '-dpng', '-r300');
-
-headers_raw = {'Time (s)', 'v (m/s)'};
-data_raw = num2cell([t, v]);
-if ~isfile('task2/task2.xlsx')
-    writecell([headers_raw; data_raw], 'task2/task2.xlsx', 'Sheet', 'Raw');
-else
-    writecell(data_raw, 'task2/task2.xlsx', 'Sheet', 'Raw', 'WriteMode', 'append');
-end
+% print(gcf, 'task2/task2.png', '-dpng', '-r300');
+% 
+% headers_raw = {'Time (s)', 'v (m/s)'};
+% data_raw = num2cell([t, v]);
+% if ~isfile('task2/task2.xlsx')
+%     writecell([headers_raw; data_raw], 'task2/task2.xlsx', 'Sheet', 'Raw');
+% else
+%     writecell(data_raw, 'task2/task2.xlsx', 'Sheet', 'Raw', 'WriteMode', 'append');
+% end
