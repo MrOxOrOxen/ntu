@@ -1,0 +1,978 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>实验室指南：在 NSCC ASPIRE 2A 上通过 VS Code Remote-SSH 使用 Codex</title><meta name="data-notion-page-icon" content="🧭"/><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%F0%9F%A7%AD%3C%2Ftext%3E%3C%2Fsvg%3E"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+/*
+ * Toggles and callouts hold arbitrary content, so they can easily be taller
+ * than a page. They must stay breakable: avoiding breaks inside them makes
+ * Chromium push the whole block onto the next page, which leaves the previous
+ * page mostly empty before every long toggle.
+ */
+details,
+aside {
+	margin: 1.25em 0;
+}
+
+/* Keep a toggle's title on the same page as the start of its content. */
+summary {
+	page-break-after: avoid;
+	break-after: avoid;
+}
+
+/*
+ * Toggle headings render as <h1/h2/h3 style="display:inline-block"> inside
+ * <summary>. Without this reset, the heading's margin-top pushes it below the
+ * ::marker (▼), so the triangle and the title appear on separate lines.
+ */
+summary h1,
+summary h2,
+summary h3,
+summary h4 {
+	margin-top: 0;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3ca551d8-5741-81c2-9ed2-c48c183671dc" class="page sans" data-notion-page-icon="🧭"><header><div class="page-header-icon undefined"><span class="icon" data-emoji="🧭"></span></div><h1 class="page-title" dir="auto">实验室指南：在 NSCC ASPIRE 2A 上通过 VS Code Remote-SSH 使用 Codex</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><blockquote id="f3165268-b27f-444c-965e-8b6f6a77bd8c" class="" dir="auto">方括号里的内容要换成你自己的信息；密码只在本机终端的提示处输入，不要发给任何人。</blockquote><h2 id="a5c86531-5422-447e-a289-94cc65e7371f" class="" dir="auto">1. 先看完这几条</h2><ul id="1be5dfa0-0663-4084-9c03-6478a014e206" class="bulleted-list" dir="auto"><li style="list-style-type:disc">这套做法只用于 NSCC 的 login node。训练、推理、长时间运行和高资源任务仍然要通过 PBS 提交。</li></ul><ul id="9b89b6ce-401c-40c0-82a4-23b6b2e31877" class="bulleted-list" dir="auto"><li style="list-style-type:disc">你需要保持两个本机终端开着：一个运行 proxy，另一个保持 SSH 连接。</li></ul><ul id="d04a31c0-941b-49af-aa6e-9110c924611e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">不要把密码、API key、token 或 ~/.codex/auth.json 发到聊天、文档或截图里。</li></ul><ul id="acb59c53-0fc8-4f77-a004-3d4cfbb72343" class="bulleted-list" dir="auto"><li style="list-style-type:disc">所有端口都只使用 127.0.0.1；不要改成 0.0.0.0，也不要开启 GatewayPorts。</li></ul><ul id="09ef4786-64b0-400c-8d5b-c6c51acab5ef" class="bulleted-list" dir="auto"><li style="list-style-type:disc">本机休眠、换网络或 VPN 断开后，通常需要重新启动 SSH 连接并测试一次。</li></ul><h2 id="510ea8e3-525a-4f9c-befb-12c446c12e03" class="" dir="auto">2. 先填好自己的信息</h2><p id="75382335-e9c7-43ac-98f6-156641b591c3" class="" dir="auto">本页后面的命令会用到这些值：</p><ul id="69ae3a0c-8e6a-4832-b223-c381d3e559c9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">[NSCC_USER]：你的 NSCC 用户名。</li></ul><ul id="c038b94e-c7bc-4b90-9f33-891df40c90e2" class="bulleted-list" dir="auto"><li style="list-style-type:disc">[NSCC_HOST]：你的机构对应的 NSCC 入口。NTU 用户通常是 <a href="http://aspire2antu.nscc.sg">aspire2antu.nscc.sg</a>；其他用户请查看 NSCC 官方说明。</li></ul><ul id="d0d3ff22-9fd7-4cd3-8b19-f6a1761320fc" class="bulleted-list" dir="auto"><li style="list-style-type:disc">[LOCAL_PORT]：本机 proxy 端口。建议先用 8899。</li></ul><ul id="d52daaa3-da87-4d94-9718-7c60c44da33e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">[REMOTE_PORT]：NSCC login node 上的临时端口。建议先用 17891，但必须先测试它是否可用。</li></ul><ul id="121c5e87-6090-416a-9f67-f5d4305e8d10" class="bulleted-list" dir="auto"><li style="list-style-type:disc">SSH alias：建议统一命名为 nscc。</li></ul><p id="1245f99a-bd1f-4e06-8c89-9736263d050b" class="" dir="auto">下面所有出现 [NSCC_USER]、[NSCC_HOST]、[LOCAL_PORT]、[REMOTE_PORT] 的地方，都要替换成自己的值。不要把方括号一起复制进命令。</p><h2 id="035fc6c0-1ec4-4815-b06e-eea5a0c635d0" class="" dir="auto">3. macOS：先启动本机 proxy</h2><p id="92b01be5-f5e6-4421-8be6-0e1701c76d20" class="" dir="auto">打开一个新的 Terminal 窗口。这个窗口之后要一直开着。</p><p id="d9d11366-2430-4c4d-be0a-5b4c449a779c" class="" dir="auto">第一次使用时运行：</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js" integrity="sha512-whYhDwtTmlC/NpZlCr6PSsAaLOrfjVg/iXAnC4H/dtiHawpShhT2SlIMbpIhT/IL/NrpdMm+Hq2C13+VKpHTYw==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><pre id="07bf83b4-db73-4240-9975-cd7169eac043" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">python3 -m venv &quot;$HOME/.local/share/nscc-codex-proxy&quot;
+&quot;$HOME/.local/share/nscc-codex-proxy/bin/pip&quot; install --upgrade pip proxy.py</code></pre><p id="96dc3666-d6f9-446f-9c1b-44695f28f5f6" class="" dir="auto">然后启动 proxy：</p><pre id="a62fce1d-c83b-45c3-be94-1265bd00d9e2" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">&quot;$HOME/.local/share/nscc-codex-proxy/bin/proxy&quot; \
+  --hostname 127.0.0.1 \
+  --port [LOCAL_PORT] \
+  --num-workers 1 \
+  --num-acceptors 1</code></pre><p id="4fad5081-18ae-430f-96d5-5c071fd0c30f" class="" dir="auto">不要关闭这个窗口。再开第二个 Terminal 窗口，检查 proxy 是否正常：</p><pre id="adc0463c-caf3-4b89-9a14-ac74ff50a57f" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">lsof -nP -iTCP:[LOCAL_PORT] -sTCP:LISTEN
+curl -sS -o /dev/null -w &#x27;HTTP_%{http_code}\n&#x27; \
+  --connect-timeout 10 \
+  --max-time 20 \
+  --proxy http://127.0.0.1:[LOCAL_PORT] \
+  https://api.openai.com/v1/models</code></pre><p id="49665e93-88aa-4d02-85c3-b7c3a2c16b6a" class="" dir="auto">你应该看到：</p><ul id="a84f0748-635d-4e36-bfb6-1583e50fa592" class="bulleted-list" dir="auto"><li style="list-style-type:disc">lsof 输出里有 127.0.0.1:[LOCAL_PORT]。</li></ul><ul id="75cebb28-5683-4bf7-bef0-fbecda797364" class="bulleted-list" dir="auto"><li style="list-style-type:disc">curl 通常显示 HTTP_401。这表示网络路径已通，只是这条测试请求没有 API 凭据，属于正常结果。</li></ul><ul id="ab389754-eba0-48a4-ba72-bff339eb52f0" class="bulleted-list" dir="auto"><li style="list-style-type:disc">若看到 HTTP_000 或 connection refused，先回到第一个窗口，确认 proxy 仍在运行。</li></ul><h2 id="b12bed6d-a328-4a29-a378-02320fb59966" class="" dir="auto">4. macOS：先做一次不改配置的 SSH 测试</h2><p id="7d46a8b6-3bcb-4945-954e-b72d6ba0ab33" class="" dir="auto">仍在第二个 Terminal 窗口运行下面命令。它不会使用你现有的 SSH 配置，因此适合第一次测试。</p><pre id="a265b723-c2f0-4066-ab14-0fd69e416b3d" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">ssh -tt -F /dev/null \
+  -o PreferredAuthentications=keyboard-interactive,password \
+  -o PubkeyAuthentication=no \
+  -o ExitOnForwardFailure=yes \
+  -R 127.0.0.1:[REMOTE_PORT]:127.0.0.1:[LOCAL_PORT] \
+  [NSCC_USER]@[NSCC_HOST] \
+  &quot;hostname; curl -sS -o /dev/null -w &#x27;HTTP_%{http_code}\n&#x27; \
+    --connect-timeout 10 --max-time 20 \
+    --proxy http://127.0.0.1:[REMOTE_PORT] \
+    https://api.openai.com/v1/models; echo&quot;</code></pre><p id="953df675-1939-44eb-82bd-3ed105bef7be" class="" dir="auto">SSH 出现密码提示时，直接在 Terminal 输入你的密码。输入时屏幕不会显示字符，这是正常的。</p><p id="58fe21c1-bff8-4519-9606-c0637868f2e4" class="" dir="auto">成功的标志是：</p><ol type="1" id="78dc23fb-76ba-4d27-a792-7d9df91e981d" class="numbered-list" start="1" dir="auto"><li>输出一个 NSCC login node 名称。</li></ol><ol type="1" id="a0ed40fe-3ee6-4bf0-91d5-89b7d75bc590" class="numbered-list" start="2" dir="auto"><li>随后出现 HTTP_401。</li></ol><p id="c7a9108e-1548-4b73-8c2b-0ddc30099f06" class="" dir="auto">如果出现 remote port forwarding failed for listen port，先换一个未使用的高端口，例如 [REMOTE_PORT] 加 1，再做一次同样测试。第二次仍然失败时请停止，不要继续换端口或使用其他转发方式；见第 11 节。</p><h2 id="6fe17c24-cc52-409f-94bc-1296c9b6b9ce" class="" dir="auto">5. macOS：写入 SSH 配置并启动稳定连接</h2><h3 id="207f7ac9-de39-4286-883c-2f63d40525c1" class="" dir="auto">5.1 备份配置</h3><pre id="fffcc41c-1683-43d5-a25a-d8a01608c7bb" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">mkdir -p ~/.ssh
+test -f ~/.ssh/config &amp;&amp; cp ~/.ssh/config ~/.ssh/config.before-nscc-codex
+touch ~/.ssh/config
+chmod 600 ~/.ssh/config
+mkdir -p ~/.ssh/sockets
+chmod 700 ~/.ssh/sockets</code></pre><h3 id="df9dbe80-abe6-4e91-bd34-6b60cd67c0a5" class="" dir="auto">5.2 编辑 ~/.ssh/config</h3><p id="5d8a4899-5cd1-4283-a90e-867f6d46d049" class="" dir="auto">打开 ~/.ssh/config。若文件里已有 Host nscc，请修改那一段；不要额外再写一个同名 Host nscc。</p><p id="5c5558c9-4034-4a27-9e20-de0be04dbc51" class="" dir="auto">加入或更新为：</p><pre id="117ec1c3-5e74-48e2-b1f1-0d9d65a09da2" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">Host nscc
+  HostName [NSCC_HOST]
+  User [NSCC_USER]
+  PreferredAuthentications keyboard-interactive,password
+  PubkeyAuthentication no
+  ServerAliveInterval 60
+  ServerAliveCountMax 3
+  ExitOnForwardFailure yes
+  RemoteForward 127.0.0.1:[REMOTE_PORT] 127.0.0.1:[LOCAL_PORT]
+  ControlMaster auto
+  ControlPath ~/.ssh/sockets/%C
+  ControlPersist 600</code></pre><p id="9dc1b7b3-4c81-46f9-bb58-23653647dacb" class="" dir="auto">保存后检查 SSH 是否读到了正确设置：</p><pre id="37c223d8-b820-4bf5-a76d-c82c6a03fa54" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">ssh -G nscc | rg -i &#x27;hostname|user|remoteforward|controlmaster|controlpath|controlpersist&#x27;</code></pre><p id="6972f33b-5bfa-4cc1-b1b9-920ec9f19ecb" class="" dir="auto">确认输出中有你的主机、用户名和两个端口。</p><h3 id="69574a94-86ef-4ddb-93d5-ee79b6cf9242" class="" dir="auto">5.3 启动连接并再次测试</h3><p id="195dc51f-ea1b-4882-9d6e-64dc43cac7d7" class="" dir="auto">如果之前有旧的 master 正在运行，先执行：</p><pre id="28a290ad-e7a9-492e-a24c-889019e52852" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">ssh -O exit nscc</code></pre><p id="d13c639c-9654-4878-872d-cb90657ab99b" class="" dir="auto">若显示没有 master，可以忽略，继续下一步。</p><p id="7fa5d52e-1025-4ae8-875d-6b0d0b555297" class="" dir="auto">启动新的 master：</p><pre id="574b7139-5cec-4883-af6b-bd629b0d39c9" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">ssh -MNf nscc
+ssh -O check nscc</code></pre><p id="e9f5bab8-e9bc-45fc-85d8-ca0cc3d4134c" class="" dir="auto">预期会看到 Master running。接着运行：</p><pre id="c83fc31a-ca32-421d-95b3-a6dd9d3a004b" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">ssh nscc &quot;hostname; curl -sS -o /dev/null -w &#x27;HTTP_%{http_code}\n&#x27; \
+  --connect-timeout 10 --max-time 20 \
+  --proxy http://127.0.0.1:[REMOTE_PORT] \
+  https://api.openai.com/v1/models; echo&quot;</code></pre><p id="fecad2b4-552a-4583-a88a-e6c0eb133088" class="" dir="auto">看到 login node 名称和 HTTP_401 后，macOS 的 SSH 部分就完成了。</p><h2 id="ec60e4c7-e375-4277-bca1-553d0717afa5" class="" dir="auto">6. Windows：请使用 WSL2</h2><p id="16fbeb2a-0adc-4391-b493-41a7f5fb5dcb" class="" dir="auto">Windows 用户建议使用 WSL2 的 Ubuntu 来运行 proxy 和 SSH。不要把正式的 SSH 隧道建立在原生 Windows OpenSSH 上；WSL2 的做法更稳定。</p><h3 id="e578517a-7d7b-4eb4-a2c1-e6675602f941" class="" dir="auto">6.1 安装 WSL2 和基本工具</h3><p id="26a0cb52-74ac-4996-bc70-bb5129a49ec6" class="" dir="auto">如果尚未安装 WSL2，请先按 Microsoft 的 WSL 文档安装 Ubuntu。打开 Ubuntu 终端，运行：</p><pre id="677071ef-f9b3-4c26-a50e-11c32a61955e" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">sudo apt update
+sudo apt install -y python3 python3-venv openssh-client curl
+mkdir -p ~/.ssh/sockets
+chmod 700 ~/.ssh ~/.ssh/sockets</code></pre><h3 id="1a04366a-3f8d-4d6b-850b-bff0251c759a" class="" dir="auto">6.2 在 WSL 的 SSH 配置中加入 nscc</h3><p id="d8e638f8-9a7c-4193-92f8-6e2dc575c8df" class="" dir="auto">在 Ubuntu 终端编辑 ~/.ssh/config，并加入下面内容：</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-jsx.min.js" integrity="sha512-m3JYEI6gx5fh9jF10FjGoMzVKcV2N6nchcDcqPCdI1L3R2WQV7br2XVNR8iTLb2daOMRl3zldbcfT40xU2ntVw==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><pre id="9f46423a-b2a3-4da9-b804-8814df1c99e8" class="code code-wrap" data-notion-code-syntax="jsx"><code class="language-jsx" style="white-space:pre-wrap;word-break:break-all">Host nscc
+  HostName [NSCC_HOST]
+  User [NSCC_USER]
+  PreferredAuthentications keyboard-interactive,password
+  PubkeyAuthentication no
+  ServerAliveInterval 60
+  ServerAliveCountMax 3
+  ExitOnForwardFailure yes
+  RemoteForward 127.0.0.1:[REMOTE_PORT] 127.0.0.1:[LOCAL_PORT]
+  ControlMaster auto
+  ControlPath ~/.ssh/sockets/%C
+  ControlPersist 600</code></pre><p id="9bce6953-321b-4baa-a89c-815985556fd7" class="" dir="auto">然后运行：</p><pre id="cc0b0e70-3e53-4a4c-a196-c8b5e7cc7d73" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">chmod 600 ~/.ssh/config</code></pre><p id="777203e7-f944-4cc7-b898-53cd141f6ca3" class="" dir="auto">接下来在 Ubuntu 终端中，按照第 3、4、5.3 节的顺序完成：</p><ol type="1" id="9fc3eb5a-e3f8-40e8-a5e0-663145bead71" class="numbered-list" start="1" dir="auto"><li>启动 proxy。</li></ol><ol type="1" id="a11ec51d-0ab8-46ec-a8a3-6338ac660210" class="numbered-list" start="2" dir="auto"><li>做一次 fresh-port 测试。</li></ol><ol type="1" id="816b3d2e-77f8-445b-a716-ece3c6730317" class="numbered-list" start="3" dir="auto"><li>运行 ssh -MNf nscc。</li></ol><ol type="1" id="ce82ebbb-36c1-4792-8aab-629e08543eca" class="numbered-list" start="4" dir="auto"><li>运行 ssh -O check nscc。</li></ol><ol type="1" id="306cdc05-7a4f-4ac4-b2ec-f53b10607810" class="numbered-list" start="5" dir="auto"><li>用 ssh nscc 做 HTTP_401 测试。</li></ol><p id="58f866c0-c254-49a9-b9b1-467f46807acf" class="" dir="auto">注意：proxy 必须运行在同一个 WSL Ubuntu 里，而不是 Windows PowerShell 里。</p><h3 id="574ed3b2-7257-46cd-b5d1-461a07b0a0c3" class="" dir="auto">6.3 让 Windows 版 VS Code 使用 WSL 的 SSH</h3><p id="3186e10a-5140-480b-aa7b-01adced8bdd2" class="" dir="auto">在 Windows PowerShell 中运行：</p><pre id="0041f50e-56ce-4b92-b5c7-c4a0d1ca1cb6" class="code code-wrap" data-notion-code-syntax="powershell"><code class="language-powershell" style="white-space:pre-wrap;word-break:break-all">New-Item -ItemType Directory -Force &quot;$env:USERPROFILE\bin&quot;
+notepad &quot;$env:USERPROFILE\bin\wsl-ssh.cmd&quot;</code></pre><p id="011e512a-2c3b-4a1d-8bd7-ba3f11799eba" class="" dir="auto">在打开的文件中粘贴：</p><pre id="d9cc9ed6-072e-4d57-932d-66faa733081b" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">@echo off
+&quot;%SystemRoot%\System32\wsl.exe&quot; -d Ubuntu -- /usr/bin/ssh %*</code></pre><p id="caf2ae1b-ec53-48ca-8659-d2f7dc6b1995" class="" dir="auto">保存并关闭。若你的 WSL 发行版名称不是 Ubuntu，先在 PowerShell 运行 wsl -l -q，然后把上面的 Ubuntu 改成显示的实际名称。</p><p id="10e2aa1b-e2b8-4e41-be9c-82801dd63550" class="" dir="auto">接着创建 Windows 的 SSH 主机列表文件：</p><pre id="646f779e-8d52-4f34-8087-8c09de094015" class="code code-wrap" data-notion-code-syntax="powershell"><code class="language-powershell" style="white-space:pre-wrap;word-break:break-all">New-Item -ItemType Directory -Force &quot;$env:USERPROFILE\.ssh&quot;
+notepad &quot;$env:USERPROFILE\.ssh\config&quot;</code></pre><p id="6f9d9af6-2af3-4748-aaed-b349f338f879" class="" dir="auto">在文件中粘贴：</p><pre id="4e3b0a38-e130-49cb-bcfb-74fc85ed65bd" class="code code-wrap" data-notion-code-syntax="jsx"><code class="language-jsx" style="white-space:pre-wrap;word-break:break-all">Host nscc
+  HostName [NSCC_HOST]
+  User [NSCC_USER]</code></pre><p id="feafcf59-7a1a-433d-83fd-4798008f783b" class="" dir="auto">保存后，打开 VS Code 的用户 settings.json。保留已有设置，只增加这两项：</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js" integrity="sha512-QXFMVAusM85vUYDaNgcYeU3rzSlc+bTV4JvkfJhjxSHlQEo+ig53BtnGkvFTiNJh8D+wv6uWAQ2vJaVmxe8d3w==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><pre id="7f042131-8fad-4e88-91d4-f7867cca82ec" class="code code-wrap" data-notion-code-syntax="json"><code class="language-json" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;remote.SSH.path&quot;: &quot;C:\\Users\\[WINDOWS_USER]\\bin\\wsl-ssh.cmd&quot;,
+  &quot;remote.SSH.configFile&quot;: &quot;C:\\Users\\[WINDOWS_USER]\\.ssh\\config&quot;
+}</code></pre><p id="03febae7-68f4-4ae1-ac99-54335751a27d" class="" dir="auto">将 [WINDOWS_USER] 换成 Windows 登录名。然后在 PowerShell 验证：</p><pre id="cac20f43-ddd5-42dd-876b-e369702b1a15" class="code code-wrap" data-notion-code-syntax="powershell"><code class="language-powershell" style="white-space:pre-wrap;word-break:break-all">&amp; &quot;$env:USERPROFILE\bin\wsl-ssh.cmd&quot; -G nscc</code></pre><p id="53d6bfe6-63f7-4f2f-9064-5ede98ef882c" class="" dir="auto">若能输出 SSH 配置，就可以在 VS Code 中选择 nscc 连接。Windows 用户在整个使用期间也要保持 WSL 的 proxy 和 SSH master 存活。</p><h2 id="1446b99f-a58a-41d9-b6cd-428822ca8e51" class="" dir="auto">7. 在 VS Code 中连接 NSCC</h2><ol type="1" id="dc38a943-4cbd-4a0c-8060-0a2dd19a887c" class="numbered-list" start="1" dir="auto"><li>在本机 VS Code 安装 Remote - SSH 扩展。</li></ol><ol type="1" id="87c8c4c8-f438-4ac9-a7ec-aea0c56285bf" class="numbered-list" start="2" dir="auto"><li>按 Cmd/Ctrl+Shift+P，运行 Remote-SSH: Connect to Host...。</li></ol><ol type="1" id="c7e6d3d2-106d-459d-8d9c-c17d50b5bbb4" class="numbered-list" start="3" dir="auto"><li>选择 nscc，不要选裸主机名或 IP。</li></ol><ol type="1" id="7191cabf-e97f-472f-b2f2-1d77d024b156" class="numbered-list" start="4" dir="auto"><li>连接成功后，在远端窗口打开自己的 NSCC 工作目录。</li></ol><ol type="1" id="4865fc88-0258-485f-8a31-c24ffa3604b4" class="numbered-list" start="5" dir="auto"><li>在窗口左下角确认显示 SSH: nscc。</li></ol><ol type="1" id="79ab49b8-aa66-4a1a-a846-1dd798cfdd1a" class="numbered-list" start="6" dir="auto"><li>在这个远端窗口安装或启用 Codex（OpenAI）扩展。</li></ol><p id="3bfd00e3-60d9-441d-a46d-d75c9c07a1e8" class="" dir="auto">如果 VS Code 设置中有下面这种内容，请删除后 reload：</p><pre id="5b2b54dc-6d21-489b-9dea-0f2855c3e5f8" class="code code-wrap" data-notion-code-syntax="json"><code class="language-json" style="white-space:pre-wrap;word-break:break-all">&quot;remote.extensionKind&quot;: {
+  &quot;openai.chatgpt&quot;: [&quot;ui&quot;]
+}</code></pre><p id="19e3d261-5a35-40a9-b90f-fb763cb5d138" class="" dir="auto">不要手动添加 remote.extensionKind 设置。</p><h2 id="f16b3912-7878-498a-afe6-c5da8c6ee130" class="" dir="auto">8. 在 NSCC 上设置 Codex</h2><p id="dce02ce1-96f0-4a1e-a95a-e33efde3a501" class="" dir="auto">下面的操作在已经连接到 nscc 的远端终端中完成。</p><h3 id="6a007761-9d91-4eb1-8e23-adf59d68391c" class="" dir="auto">8.1 先确认你在 login node</h3><pre id="0bb58d7f-a27b-46e5-b3c7-92dcaef5f010" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">hostname
+printf &#x27;PBS_JOBID=%s\n&#x27; &quot;$PBS_JOBID&quot;</code></pre><p id="25bd4867-0526-4ac3-92f1-45660e9770a8" class="" dir="auto">PBS_JOBID 通常为空，表示你在 login node。这是本节应进行配置的位置。</p><h3 id="ff2c51a9-66c4-4cab-bd69-41cbb0abe75a" class="" dir="auto">8.2 编辑 .bashrc</h3><p id="0d33b36f-18a3-4e96-bcfa-9abe887369e6" class="" dir="auto">先做备份：</p><pre id="1cb39e8e-d4a7-40c5-b8e3-e8cd14ae05e8" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all">cp ~/.bashrc ~/.bashrc.before-nscc-codex</code></pre><p id="9eb23f6a-98de-4ec2-8ce1-d183c13c2a79" class="" dir="auto">然后用你习惯的编辑器打开 ~/.bashrc，将下面内容放到文件最上面。一定要放在任何“非交互 shell 直接退出”的语句之前。</p><pre id="d421e918-0879-4027-a6df-d472fba5b9c3" class="code code-wrap" data-notion-code-syntax="bash"><code class="language-bash" style="white-space:pre-wrap;word-break:break-all"># &gt;&gt;&gt; nscc-codex-proxy &gt;&gt;&gt;
+if [[ &quot;$(hostname -s)&quot; == asp2a-login-* ]]; then
++  export HTTP_PROXY=&quot;http://127.0.0.1:[REMOTE_PORT]&quot;
++  export HTTPS_PROXY=&quot;$HTTP_PROXY&quot;
++  export http_proxy=&quot;$HTTP_PROXY&quot;
++  export https_proxy=&quot;$HTTPS_PROXY&quot;
++  export NO_PROXY=&quot;localhost,127.0.0.1,::1&quot;
++  export no_proxy=&quot;$NO_PROXY&quot;
++  export PATH=&quot;$HOME/.local/bin:$PATH&quot;
++fi
++# &lt;&lt;&lt; nscc-codex-proxy &lt;&lt;&lt;
++```
+
+保存后，退出远端终端并重新运行 ssh nscc。重新登录后测试：
+</code></pre><p id="a06799d4-f9e9-455b-b0b7-d7a7440bca9a" class="" dir="auto">printf &#x27;HTTP_PROXY=%sn&#x27; &quot;$HTTP_PROXY&quot;</p><pre id="2956e2c9-68c2-43b4-82db-cebff7239a0a" class="code code-wrap" data-notion-code-syntax="jsx"><code class="language-jsx" style="white-space:pre-wrap;word-break:break-all">
+应该显示 http://127.0.0.1:[REMOTE_PORT]。
+
+注意：上面代码中第一行 if 前面不要保留加号；那是本页排版符号，不是命令的一部分。
+
+### 8.3 设置 VS Code Server 环境
+
+先检查文件是否已经存在：
+</code></pre><p id="e4e6e596-de17-4ca7-9862-d090a5ee60b2" class="" dir="auto">ls -l &quot;$HOME/.vscode-server/server-env-setup&quot; 2&gt;/dev/null || true</p><pre id="bb2d0bc9-f68e-4216-b497-2efdca47fd42" class="code code-wrap" data-notion-code-syntax="jsx"><code class="language-jsx" style="white-space:pre-wrap;word-break:break-all">
+如果文件不存在，可直接复制下面整段命令。如果它已存在，请只合并下面带 nscc-codex-proxy 标记的内容，不要删除自己的其他设置。
+</code></pre><p id="42331ca2-375b-483c-b50d-1f9348d5e62a" class="" dir="auto">mkdir -p &quot;$HOME/.vscode-server&quot;</p><p id="222936bf-9449-450a-9030-97aaa34c7270" class="" dir="auto">cat &gt; &quot;$HOME/.vscode-server/server-env-setup&quot; &lt;&lt;&#x27;EOF&#x27;</p><p id="126d259d-4b21-4ea5-993a-58387873e9ba" class="" dir="auto">#!/bin/sh</p><h1 id="9a5e6ab8-0c93-48c8-a1da-1e97930524e7" class="" dir="auto">&gt;&gt;&gt; nscc-codex-proxy &gt;&gt;&gt;</h1><p id="c9299a33-7163-41fd-8bb4-30e2c5b25815" class="" dir="auto">case &quot;$(hostname -s)&quot; in<div class="indented"><p id="5b0224ec-fdea-4855-81e7-d2e92681a090" class="" dir="auto">asp2a-login-*)<div class="indented"><p id="9cc6dbad-5d51-48c9-acf4-914d1e901840" class="" dir="auto">export HTTP_PROXY=&quot;http://127.0.0.1:[REMOTE_PORT]&quot;</p><p id="eaab4abc-65ac-4ed6-aaa0-be9e062322f6" class="" dir="auto">export HTTPS_PROXY=&quot;$HTTP_PROXY&quot;</p><p id="b0c94e81-c112-4dde-a5b5-5198ec1c55a2" class="" dir="auto">export http_proxy=&quot;$HTTP_PROXY&quot;</p><p id="a0f32864-8cb1-4c98-9f3a-ed7ce0ddf202" class="" dir="auto">export https_proxy=&quot;$HTTPS_PROXY&quot;</p><p id="d9d6a227-4b1a-4b9a-ac92-7e143bf982b4" class="" dir="auto">export NO_PROXY=&quot;<a href="http://localhost">localhost</a>,127.0.0.1,::1&quot;</p><p id="20e9ed70-644a-4d4a-b24b-c6af7637a13f" class="" dir="auto">export no_proxy=&quot;$NO_PROXY&quot;</p><p id="ea2f1a9c-5e08-4b29-bb20-c84b3a1c793f" class="" dir="auto">export PATH=&quot;$HOME/.local/bin:$PATH&quot;</p><p id="9acaa15e-fef5-45f1-8722-ebc2cae78c72" class="" dir="auto">;;</p></div></p></div></p><p id="37179839-e39b-4257-be2a-ad2edc6740cc" class="" dir="auto">esac</p><h1 id="30e0b39d-704b-454b-8c88-59234442612a" class="" dir="auto">&lt;&lt;&lt; nscc-codex-proxy &lt;&lt;&lt;</h1><p id="4fa49d90-d828-4ff7-84a6-0ac9de508513" class="" dir="auto">EOF</p><p id="67812059-1f08-4680-ab1d-fe4dd2f955a6" class="" dir="auto">chmod 600 &quot;$HOME/.vscode-server/server-env-setup&quot;</p><p id="8e82107c-6d14-4f07-b136-8e2470c8542c" class="" dir="auto">sh -n &quot;$HOME/.vscode-server/server-env-setup&quot;</p><pre id="c0600f7f-69cb-4750-a482-c067055b0b94" class="code code-wrap" data-notion-code-syntax="jsx"><code class="language-jsx" style="white-space:pre-wrap;word-break:break-all">
+最后一条没有输出就表示脚本格式正常。
+
+### 8.4 安装并登录 Linux 版 Codex
+
+仍在 login node 运行：
+</code></pre><p id="a06601fc-1849-49fd-836d-55f3cb1a1673" class="" dir="auto">curl -fsSL <a href="https://chatgpt.com/codex/install.sh">https://chatgpt.com/codex/install.sh</a> | sh</p><p id="0b569f22-f850-4216-992e-067e7b9bf36c" class="" dir="auto">export PATH=&quot;$HOME/.local/bin:$PATH&quot;</p><p id="3e1faab7-f9eb-48b3-bd12-2da93cf9803c" class="" dir="auto">command -v codex</p><p id="a2edb781-b5d6-4c0d-95d1-2786ad847b89" class="" dir="auto">codex --version</p><p id="1770daee-b257-4334-b92e-3b56088fc35f" class="" dir="auto">codex login status</p><pre id="bf4d6288-8b70-4362-93f7-f91167226785" class="code code-wrap" data-notion-code-syntax="jsx"><code class="language-jsx" style="white-space:pre-wrap;word-break:break-all">
+如果显示尚未登录，运行：
+</code></pre><p id="f8901557-387a-456f-982f-8c13d6b05c49" class="" dir="auto">codex login</p><pre id="b4cd14ba-5c06-4656-81fb-7775ffb5e372" class="code code-wrap" data-notion-code-syntax="jsx"><code class="language-jsx" style="white-space:pre-wrap;word-break:break-all">
+按屏幕提示完成登录。不要复制或发送任何登录代码、token 或认证文件内容。
+
+可选测试。它会实际发起一次 Codex 请求：
+</code></pre><p id="73bfea3f-5594-4dae-99e7-6e57ec46b0f5" class="" dir="auto">codex exec --ephemeral --sandbox read-only --skip-git-repo-check -C /tmp \<div class="indented"><p id="95752c91-060e-451d-b6e0-c2a68b2dffc9" class="" dir="auto">&#x27;Reply with exactly: READY. Do not use tools, run commands, or modify files.&#x27;</p></div></p><pre id="8ed4e330-29a1-4250-8535-6b4ed8f56986" class="code code-wrap" data-notion-code-syntax="jsx"><code class="language-jsx" style="white-space:pre-wrap;word-break:break-all">
+看到 READY 且命令正常结束，就说明远端 Codex 可以工作。
+
+## 9. 重启 VS Code 后开始使用
+
+完成第 8 节后，回到 VS Code：
+
+1. 先保存未提交的工作。
+2. 按 Cmd/Ctrl+Shift+P。
+3. 运行 Remote-SSH: Kill VS Code Server on Host...。
+4. 选择 nscc。
+5. 再运行 Remote-SSH: Connect to Host...，重新选择 nscc。
+6. 在远端窗口打开 Codex，确认它能读取和编辑工作区文件。
+
+如果 Codex 一直显示 reconnect，先不要反复重装扩展。先到第 10 节做检查。
+
+## 10. 日常使用与常见问题
+
+### 每次开始工作
+
+1. 启动本机或 WSL 中的 proxy，并保持窗口打开。
+2. 运行 ssh -MNf nscc。
+3. 运行 ssh -O check nscc。
+4. 运行下面测试：
+</code></pre><p id="607824f9-dc3a-4aa6-a188-a7ede0ff5e81" class="" dir="auto">ssh nscc &quot;hostname; curl -sS -o /dev/null -w &#x27;HTTP_%{http_code}n&#x27; \<div class="indented"><p id="e94f5950-10e1-4543-828c-83ad2e0dacbd" class="" dir="auto">--connect-timeout 10 --max-time 20 \</p><p id="16788a19-c3a2-4752-ba76-707c6f3af19d" class="" dir="auto">--proxy http://127.0.0.1:[REMOTE_PORT] \</p><p id="9e8b0d58-bbfa-4a3d-88a7-280fb92be01e" class="" dir="auto"><a href="https://api.openai.com/v1/models">https://api.openai.com/v1/models</a>; echo&quot;</p></div></p><pre id="8080e333-e679-47d4-8784-c77a7ec03f40" class="code code-wrap" data-notion-code-syntax="jsx"><code class="language-jsx" style="white-space:pre-wrap;word-break:break-all">
+出现 hostname 和 HTTP_401 后，再打开 VS Code。
+
+### 本机显示 HTTP_000 或 connection refused
+
+proxy 没有运行，或者端口写错。回到运行 proxy 的窗口重新启动它，再重做本机 curl 测试。
+
+### ssh -O check nscc 失败
+
+SSH master 已断开。先运行：
+</code></pre><p id="4de434b7-4afc-4d96-bd6b-a9a76bbedc87" class="" dir="auto">ssh -O exit nscc</p><p id="c77204df-548f-40e8-af1f-b7ba2a9982cf" class="" dir="auto">ssh -MNf nscc</p><p id="622a651e-e1b5-4865-b443-44a27a1fbee8" class="" dir="auto">ssh -O check nscc</p><pre id="08ba23d5-0d66-4808-86a1-33f3bd755367" class="code code-wrap" data-notion-code-syntax="jsx"><code class="language-jsx" style="white-space:pre-wrap;word-break:break-all">
+然后重做上面的 HTTP_401 测试。
+
+### VS Code 能连上，但 Codex 反复 reconnect
+
+按这个顺序处理：
+
+1. 确认 proxy 还在运行。
+2. 确认 ssh -O check nscc 显示 Master running。
+3. 确认 ssh nscc 的 HTTP 测试能看到 HTTP_401。
+4. 确认 ~/.vscode-server/server-env-setup 存在且 sh -n 没有输出。
+5. 用 Remote-SSH: Kill VS Code Server on Host... 重启远端 VS Code Server。
+
+### 远端端口测试被拒绝
+
+如果 fresh-port 测试两次都显示 remote port forwarding failed，请停止配置。不要尝试公网监听、GatewayPorts、SOCKS 或不断扫描端口。
+
+可以向 NSCC support 说明：你需要一个仅限 127.0.0.1 的用户级 SSH 反向转发，格式为 -R 127.0.0.1:远端端口:127.0.0.1:本机端口；不需要公网监听或服务器配置改动。
+
+## 11. PBS：重型任务要这样做
+
+login node 只做编辑、轻量检查和提交任务。训练、推理、GPU 工作、长时间运行的程序都通过 PBS。
+
+例如创建 job.pbs：
+</code></pre><p id="8ecc0181-9f7d-4fe4-ae1b-4b44c1a208cb" class="" dir="auto">#!/bin/bash</p><p id="b85aea35-7270-4367-8cb7-6d06f39317f8" class="" dir="auto">#PBS -N experiment</p><p id="8d6691cd-e31b-4248-afb2-b1c7c9fdaec0" class="" dir="auto">#PBS -l select=1:ncpus=[NCPU]:mem=[MEMORY]</p><p id="784b2ff5-2561-4f5c-93cc-51b5fb70a091" class="" dir="auto">#PBS -l walltime=[HH:MM:SS]</p><p id="c801ab9e-0d34-496d-bf1e-7f126ebc2d3b" class="" dir="auto">#PBS -j oe</p><p id="ed2c8b76-d383-4018-9717-85190ed5b2a2" class="" dir="auto">cd &quot;$PBS_O_WORKDIR&quot;</p><p id="88e6caa0-dfb3-4c3d-952a-521ba073a84f" class="" dir="auto">module purge</p><h1 id="6e6ae182-e52e-452d-a7cd-bd810f0194e5" class="" dir="auto">module load [required-module]</h1><p id="2736f5ea-885d-4749-b833-4545778c18df" class="" dir="auto">python run_<a href="http://experiment.py">experiment.py</a></p><pre id="e404d911-2a3a-401c-b446-f4b12277d48a" class="code code-wrap" data-notion-code-syntax="jsx"><code class="language-jsx" style="white-space:pre-wrap;word-break:break-all">
+按你的项目要求填写资源参数后，提交并查看状态：
+</code></pre><p id="70019b7b-ea05-4837-8aae-4ca21cbe8430" class="" dir="auto">qsub job.pbs</p><p id="2d664b7b-4881-476b-a5ec-0803907dafd1" class="" dir="auto">qstat -u &quot;$USER&quot;</p><pre id="c55a4a77-63ee-4d94-8d02-bf69c68890c2" class="code code-wrap" data-notion-code-syntax="jsx"><code class="language-jsx" style="white-space:pre-wrap;word-break:break-all">
+不要在 compute node 中依赖本页的 127.0.0.1:[REMOTE_PORT]。它只属于 login node 的 SSH 连接。
+
+## 12. 结束工作时
+
+先关闭 SSH master：
+</code></pre><p id="f54d2760-4f6a-4210-a307-4d0ba399e397" class="" dir="auto">ssh -O exit nscc</p><pre id="ceb623e7-2bff-4297-b6a4-b2badfa83e21" class="code code-wrap" data-notion-code-syntax="jsx"><code class="language-jsx" style="white-space:pre-wrap;word-break:break-all">
+然后回到 proxy 窗口按 Ctrl-C 停止它。
+
+## 13. 最后检查
+
+- [ ] proxy 只监听 127.0.0.1:[LOCAL_PORT]。
+- [ ] fresh-port 测试显示 hostname 和 HTTP_401。
+- [ ] ssh -O check nscc 显示 Master running。
+- [ ] VS Code 用 nscc alias 连接。
+- [ ] 远端 codex --version 和 codex login status 正常。
+- [ ] Codex 能在远端工作区读写文件。
+- [ ] GPU/训练/推理等重型工作通过 PBS 提交。
+
+## 官方链接
+
+- [NSCC ASPIRE 2A FAQ](https://help.nscc.sg/aspire2a/faqs/)
+- [OpenAI Codex CLI](https://learn.chatgpt.com/docs/codex/cli)
+- [VS Code Remote - SSH](https://code.visualstudio.com/docs/remote/ssh)
+- [Microsoft WSL](https://learn.microsoft.com/windows/wsl/)</code></pre></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
