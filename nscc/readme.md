@@ -8,7 +8,7 @@ All rights reserved.
 
 参考：
 
-- nscc.docx（*Author: Jiahua Dong @ MARS Lab）
+- nscc.docx（Author: Jiahua Dong @ MARS Lab）
 - [Using NTU JumpHost to NSCC ASPIRE-2A](https://entuedu.sharepoint.com/teams/ntuhpcusersgroup2/SitePages/Using-NTU-JumpHost-to-NSCC-ASPIRE-2A.aspx)
 
 以下步骤能够完整实现的前提是：已经有了NTU的vpn权限。
