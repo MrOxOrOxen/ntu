@@ -8,7 +8,7 @@ All rights reserved.
 
 参考：
 
-- 实验室指南：在 NSCC ASPIRE 2A 上通过 VS Code Remote-SSH 使用 Codex.html（*Author: Nianbing Su $ Yizhou Liu @ MARS Lab*）
+- 实验室指南：在 NSCC ASPIRE 2A 上通过 VS Code Remote-SSH 使用 Codex.html（Author: Nianbing Su $ Yizhou Liu @ MARS Lab）
 - [NSCC ASPIRE 2A FAQ](https://help.nscc.sg/aspire2a/faqs/)
 - [OpenAI Codex CLI](https://learn.chatgpt.com/docs/codex/cli)
 - [VS Code Remote - SSH](https://code.visualstudio.com/docs/remote/ssh)
