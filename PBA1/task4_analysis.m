@@ -38,6 +38,7 @@ xline(t_g2, 'k--', '1 \rightarrow 2', 'LineWidth', 1.5);
 xline(t_g3, 'k--', '2 \rightarrow 3', 'LineWidth', 1.5);
 xline(t_g4, 'k--', '3 \rightarrow 4', 'LineWidth', 1.5);
 xline(t_g5, 'k--', '4 \rightarrow 5', 'LineWidth', 1.5);
+xline(t_100, 'r--', 'LineWidth', 1.5);
 
 ylabel("Velocity (km/h)", 'FontSize', 13);
 xlabel("Time (s)", 'FontSize', 13);
@@ -108,6 +109,7 @@ xline(t_g2, 'k--', '1 \rightarrow 2', 'LineWidth', 1.5);
 xline(t_g3, 'k--', '2 \rightarrow 3', 'LineWidth', 1.5);
 xline(t_g4, 'k--', '3 \rightarrow 4', 'LineWidth', 1.5);
 xline(t_g5, 'k--', '4 \rightarrow 5', 'LineWidth', 1.5);
+xline(t_100, 'r--', 'LineWidth', 1.5);
 
 ylabel("Velocity (km/h)", 'FontSize', 13);
 xlabel("Time (s)", 'FontSize', 13);
