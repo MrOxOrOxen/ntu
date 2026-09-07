@@ -1,6 +1,6 @@
 codex文件夹用于记录在nscc aspire 2a环境下，在vscode remote ssh中部署codex的过程。
 
-Last updated on Sep 4, 2026.
+Last updated on Sep 7, 2026.
 
 Copyright © 2026 MARS Lab, Nanyang Technological University, Singapore.
 
@@ -205,7 +205,7 @@ codex exec --ephemeral --sandbox read-only --skip-git-repo-check -C /tmp \
 ```
 ssh -MNf 103.72.192.6
 ssh -O check 103.72.192.6
-ssh nscc "hostname; curl -sS -o /dev/null -w 'HTTP_%{http_code}\n' \
+ssh 103.72.192.6 "hostname; curl -sS -o /dev/null -w 'HTTP_%{http_code}\n' \
   --connect-timeout 10 --max-time 20 \
   --proxy http://127.0.0.1:17891 \
   https://api.openai.com/v1/models; echo"
