@@ -1,0 +1,97 @@
+(.venv) yjx@yjx:~/mujoco_ws/project1$ python3 main_mujoco_acados.py 
+field AcadosOcpDims.N has been migrated to AcadosOcpOptions.N_horizon. setting AcadosOcpOptions.N_horizon = N. For future comppatibility, please use AcadosOcpOptions.N_horizon directly.
+/home/yjx/acados/interfaces/acados_template/acados_template/acados_code_gen_options.py:384: UserWarning: A path is provided for json_file. This is not supported. The json file will be written to the code_export_directory /home/yjx/mujoco_ws/project1/acados_codegen_quadrotor instead.
+  warnings.warn(f"A path is provided for json_file. This is not supported. The json file will be written to the code_export_directory {self.code_export_directory} instead.")
+External functions generated in 12.780 ms.
+Templated solver code generated in 1164.175 ms.
+rm -f libacados_ocp_solver_ocp_quadrotor_acados_1f1c76a4.so
+rm -f quadrotor_acados_constraints/quadrotor_acados_constr_h_fun_jac_uxt_zt.o quadrotor_acados_constraints/quadrotor_acados_constr_h_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_0_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_0_fun_jac_ut_xt.o quadrotor_acados_cost/quadrotor_acados_cost_y_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_fun_jac_ut_xt.o quadrotor_acados_cost/quadrotor_acados_cost_y_e_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_e_fun_jac_ut_xt.o acados_solver_ocp_quadrotor_acados_1f1c76a4.o
+cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/acados -I/home/yjx/acados/include/blasfeo/include -I/home/yjx/acados/include/hpipm/include  -c -o quadrotor_acados_constraints/quadrotor_acados_constr_h_fun_jac_uxt_zt.o quadrotor_acados_constraints/quadrotor_acados_constr_h_fun_jac_uxt_zt.c
+cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/acados -I/home/yjx/acados/include/blasfeo/include -I/home/yjx/acados/include/hpipm/include  -c -o quadrotor_acados_constraints/quadrotor_acados_constr_h_fun.o quadrotor_acados_constraints/quadrotor_acados_constr_h_fun.c
+cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/acados -I/home/yjx/acados/include/blasfeo/include -I/home/yjx/acados/include/hpipm/include  -c -o quadrotor_acados_cost/quadrotor_acados_cost_y_0_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_0_fun.c
+cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/acados -I/home/yjx/acados/include/blasfeo/include -I/home/yjx/acados/include/hpipm/include  -c -o quadrotor_acados_cost/quadrotor_acados_cost_y_0_fun_jac_ut_xt.o quadrotor_acados_cost/quadrotor_acados_cost_y_0_fun_jac_ut_xt.c
+cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/acados -I/home/yjx/acados/include/blasfeo/include -I/home/yjx/acados/include/hpipm/include  -c -o quadrotor_acados_cost/quadrotor_acados_cost_y_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_fun.c
+cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/acados -I/home/yjx/acados/include/blasfeo/include -I/home/yjx/acados/include/hpipm/include  -c -o quadrotor_acados_cost/quadrotor_acados_cost_y_fun_jac_ut_xt.o quadrotor_acados_cost/quadrotor_acados_cost_y_fun_jac_ut_xt.c
+cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/acados -I/home/yjx/acados/include/blasfeo/include -I/home/yjx/acados/include/hpipm/include  -c -o quadrotor_acados_cost/quadrotor_acados_cost_y_e_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_e_fun.c
+cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/acados -I/home/yjx/acados/include/blasfeo/include -I/home/yjx/acados/include/hpipm/include  -c -o quadrotor_acados_cost/quadrotor_acados_cost_y_e_fun_jac_ut_xt.o quadrotor_acados_cost/quadrotor_acados_cost_y_e_fun_jac_ut_xt.c
+cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/acados -I/home/yjx/acados/include/blasfeo/include -I/home/yjx/acados/include/hpipm/include  -c -o acados_solver_ocp_quadrotor_acados_1f1c76a4.o acados_solver_ocp_quadrotor_acados_1f1c76a4.c
+cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/acados -I/home/yjx/acados/include/blasfeo/include -I/home/yjx/acados/include/hpipm/include  -c -o quadrotor_acados_model/quadrotor_acados_expl_ode_fun.o quadrotor_acados_model/quadrotor_acados_expl_ode_fun.c
+cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/acados -I/home/yjx/acados/include/blasfeo/include -I/home/yjx/acados/include/hpipm/include  -c -o quadrotor_acados_model/quadrotor_acados_expl_vde_forw.o quadrotor_acados_model/quadrotor_acados_expl_vde_forw.c
+cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/acados -I/home/yjx/acados/include/blasfeo/include -I/home/yjx/acados/include/hpipm/include  -c -o quadrotor_acados_model/quadrotor_acados_expl_vde_adj.o quadrotor_acados_model/quadrotor_acados_expl_vde_adj.c
+cc -shared quadrotor_acados_constraints/quadrotor_acados_constr_h_fun_jac_uxt_zt.o quadrotor_acados_constraints/quadrotor_acados_constr_h_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_0_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_0_fun_jac_ut_xt.o quadrotor_acados_cost/quadrotor_acados_cost_y_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_fun_jac_ut_xt.o quadrotor_acados_cost/quadrotor_acados_cost_y_e_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_e_fun_jac_ut_xt.o acados_solver_ocp_quadrotor_acados_1f1c76a4.o quadrotor_acados_model/quadrotor_acados_expl_ode_fun.o quadrotor_acados_model/quadrotor_acados_expl_vde_forw.o quadrotor_acados_model/quadrotor_acados_expl_vde_adj.o -o libacados_ocp_solver_ocp_quadrotor_acados_1f1c76a4.so -L/home/yjx/acados/lib -lacados -lhpipm -lblasfeo -lm \
+-L -l
+Build completed in 835.765 ms.
+acados was compiled without OpenMP.
+initial acados thrust = [3.06378929 2.88783311 3.53448958 3.48233564]
+initial acados solve time = 0.001458s
+t = 1.00s, acados thrust = [3.23805846 2.89227023 2.60561311 2.54753718]
+t = 2.00s, acados thrust = [2.81487219 2.77215303 3.13093299 2.36042508]
+t = 3.00s, acados thrust = [2.80219692 2.63091022 2.91633141 2.4986956 ]
+t = 4.00s, acados thrust = [2.52985308 2.98322897 2.83075107 3.10618596]
+t = 5.00s, acados thrust = [3.02128847 3.10384855 2.73647728 3.05651175]
+t = 6.00s, acados thrust = [2.89765242 3.41602805 3.10540027 2.7439699 ]
+t = 7.00s, acados thrust = [2.59035356 2.64874412 3.02382254 2.81378264]
+t = 8.00s, acados thrust = [3.24252064 2.7007447  2.82773519 2.68759606]
+t = 9.00s, acados thrust = [3.30241797 3.28149126 2.87543494 2.82785853]
+t = 10.00s, acados thrust = [3.00349186 3.75073993 3.16328008 3.24699952]
+t = 11.00s, acados thrust = [2.80696318 3.18181364 2.90043389 2.75167757]
+t = 12.00s, acados thrust = [2.53771617 2.54574662 2.51790608 2.75064299]
+t = 13.00s, acados thrust = [3.25837012 3.08270451 2.84179705 2.98477226]
+t = 14.00s, acados thrust = [3.14795394 3.34069774 3.1700034  3.29927266]
+t = 15.00s, acados thrust = [2.76789564 2.82492811 2.57431631 3.15001871]
+t = 16.00s, acados thrust = [2.77835798 2.89507688 2.86581733 2.75471583]
+t = 17.00s, acados thrust = [3.18192569 2.63219041 2.70331303 2.70389829]
+t = 18.00s, acados thrust = [3.03897735 2.90610541 3.13714242 3.10868255]
+t = 19.00s, acados thrust = [2.77179839 3.02665445 3.1733504  2.71697445]
+t = 20.00s, acados thrust = [3.37081672 3.36966037 3.03576318 3.10274962]
+t = 21.00s, acados thrust = [2.84599378 3.27978151 2.93092461 3.35685724]
+t = 22.00s, acados thrust = [3.14464022 2.92293521 3.0560639  2.74113711]
+t = 23.00s, acados thrust = [3.00013589 3.08736118 3.55839026 2.90084232]
+t = 24.00s, acados thrust = [2.92813136 2.80645129 2.70842613 2.67034745]
+t = 25.00s, acados thrust = [2.74139341 2.60788409 3.26814822 3.25766107]
+t = 26.00s, acados thrust = [2.7651181  3.00126048 3.17821248 2.83008259]
+t = 27.00s, acados thrust = [2.73204536 2.55885163 2.81291162 2.52055534]
+t = 28.00s, acados thrust = [3.01071616 2.82121152 3.36109702 2.88100272]
+t = 29.00s, acados thrust = [2.90570575 3.03841479 2.60843647 3.17162822]
+t = 30.00s, acados thrust = [2.9075044  2.93520587 2.59039294 2.94961237]
+t = 31.00s, acados thrust = [2.80814757 2.82084189 3.06059373 3.15455196]
+t = 32.00s, acados thrust = [3.11283454 3.05304635 2.91326168 2.87035579]
+t = 33.00s, acados thrust = [2.8146051  2.60912492 3.00521905 2.52502221]
+t = 34.00s, acados thrust = [3.14830369 2.7909746  2.99001196 2.9507521 ]
+t = 35.00s, acados thrust = [2.99666321 3.20097256 2.84563661 3.51255936]
+t = 36.00s, acados thrust = [3.06991809 3.60399883 2.99460345 2.70065656]
+t = 37.00s, acados thrust = [3.19279567 2.90983288 2.88917119 3.26844197]
+t = 38.00s, acados thrust = [2.86519538 2.83354792 2.73486321 2.94276951]
+t = 39.00s, acados thrust = [2.90218104 2.85038346 2.67840551 3.02937654]
+t = 40.00s, acados thrust = [2.53936193 2.87457273 2.56551681 2.8939793 ]
+t = 41.00s, acados thrust = [3.17225877 2.94288202 2.72376221 3.14560262]
+t = 42.00s, acados thrust = [2.80975478 2.41846884 2.94631188 2.47138685]
+t = 43.00s, acados thrust = [3.15220557 2.97135662 2.99707016 3.00941077]
+t = 44.00s, acados thrust = [2.75016255 2.63574934 2.70163566 2.81921705]
+t = 45.00s, acados thrust = [2.63789836 2.79654426 2.59783323 2.72624015]
+t = 46.00s, acados thrust = [2.65747689 3.02027245 2.4064262  2.8747522 ]
+t = 47.00s, acados thrust = [3.01309179 2.90119925 2.89915111 2.80927733]
+t = 48.00s, acados thrust = [3.48332704 3.21414896 3.05686799 2.68857941]
+t = 49.00s, acados thrust = [3.01332983 2.86136593 3.0063405  2.93953354]
+t = 50.00s, acados thrust = [2.85085986 2.81079936 3.03791427 2.9567657 ]
+t = 51.00s, acados thrust = [2.99383981 2.75067127 2.74016378 2.88448431]
+t = 52.00s, acados thrust = [3.25971437 2.79147705 3.13964301 3.02764187]
+t = 53.00s, acados thrust = [3.20525952 2.66005413 3.29431736 3.11662932]
+t = 54.00s, acados thrust = [2.33544318 2.66061797 2.7269651  3.01501442]
+t = 55.00s, acados thrust = [2.84394064 3.13412681 2.79195736 2.96821645]
+t = 56.00s, acados thrust = [2.98401908 2.89230777 2.83621393 2.89316739]
+t = 57.00s, acados thrust = [2.99580456 2.59007984 2.76985097 2.94542134]
+t = 58.00s, acados thrust = [3.05418243 3.00415032 3.08464174 2.77322364]
+t = 59.00s, acados thrust = [2.94265201 2.99778002 3.03450783 2.40316887]
+t = 60.00s, acados thrust = [2.71272571 3.42577477 2.77413783 3.01296339]
+
+acados mujoco simulation results
+position tracking rmse(m): [0.01361246 0.01343727 0.00892824]
+ekf position estimation rmse(m): [0.01035956 0.01083977 0.01071964]
+acados nmpc solver success rate: 1.0
+avg acados nmpc solve time(s): 0.0009907826569482544
+max acados nmpc solve time(s): 0.017103117001170176
+min rotor thrust(N): 1.53828011916271
+max rotor thrust(N): 4.62651753887929
+saved acados replay data to fig_acados/mujoco_replay_acados.json
+saved acados figures to fig_acados
