@@ -1,0 +1,4 @@
+__pycache__/
+.venv/
+acados_codegen_quadrotor/
+temp/
