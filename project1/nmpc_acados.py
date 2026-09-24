@@ -85,6 +85,10 @@ def quaternion_to_euler_symbolic(q):
     return roll, pitch, yaw
 
 
+def angle_error(angle, ref):
+    return ca.atan2(ca.sin(angle - ref), ca.cos(angle - ref))
+
+
 class AcadosNMPC:
     def __init__(self, horizon=N_ACADOS, dt=NMPC_ACADOS_DT):
         from acados_template import AcadosModel, AcadosOcp, AcadosOcpSolver
@@ -93,8 +97,7 @@ class AcadosNMPC:
         self.dt = dt
         self.nx = 13
         self.nu = 4
-        self.ny = 15
-        self.ny_e = 11
+        self.np = 7
         self.T_hover = MASS * G / 4
         self.previous_U = None
         self.previous_X = None
@@ -102,6 +105,7 @@ class AcadosNMPC:
         x = ca.SX.sym("x", self.nx)
         xdot = ca.SX.sym("xdot", self.nx)
         u = ca.SX.sym("u", self.nu)
+        p = ca.SX.sym("p", self.np)
         f_expl = dynamics_symbolic(x, u)
 
         model = AcadosModel()
@@ -109,13 +113,45 @@ class AcadosNMPC:
         model.x = x
         model.xdot = xdot
         model.u = u
+        model.p = p
         model.f_expl_expr = f_expl
         model.f_impl_expr = xdot - f_expl
 
         roll, pitch, yaw = quaternion_to_euler_symbolic(x[6:10])
         model.con_h_expr = ca.vertcat(roll, pitch, x[10], x[11], x[12])
-        model.cost_y_expr = ca.vertcat(x[0:3], x[3:6], ca.sin(yaw), ca.cos(yaw), x[10:13], u)
-        model.cost_y_expr_e = ca.vertcat(x[0:3], x[3:6], ca.sin(yaw), ca.cos(yaw), x[10:13])
+
+        Q_POS = np.array([30, 30, 40])
+        Q_VEL = np.array([5, 5, 8])
+        Q_YAW = 5
+        Q_OMEGA = np.array([0.1, 0.1, 0.1])
+        R_U = np.array([0.05, 0.05, 0.05, 0.05])
+
+        pos_ref = p[0:3]
+        vel_ref = p[3:6]
+        yaw_ref = p[6]
+        pos_error = x[0:3] - pos_ref
+        vel_error = x[3:6] - vel_ref
+        yaw_error = angle_error(yaw, yaw_ref)
+
+        state_stage_cost = 0
+        for i in range(3):
+            state_stage_cost += Q_POS[i] * pos_error[i]**2
+            state_stage_cost += Q_VEL[i] * vel_error[i]**2
+            state_stage_cost += Q_OMEGA[i] * x[10 + i]**2
+        state_stage_cost += Q_YAW * yaw_error**2
+
+        control_stage_cost = 0
+        for i in range(4):
+            control_stage_cost += R_U[i] * (u[i] - self.T_hover)**2
+
+        terminal_cost = 0
+        for i in range(3):
+            terminal_cost += 50 * pos_error[i]**2
+            terminal_cost += 10 * vel_error[i]**2
+
+        model.cost_expr_ext_cost_0 = control_stage_cost
+        model.cost_expr_ext_cost = state_stage_cost + control_stage_cost
+        model.cost_expr_ext_cost_e = terminal_cost
 
         ocp = AcadosOcp()
         ocp.model = model
@@ -123,17 +159,10 @@ class AcadosNMPC:
         ocp.solver_options.tf = self.N * self.dt
         ocp.code_export_directory = "acados_codegen_quadrotor"
 
-        Q_POS = np.array([30, 30, 40])
-        Q_VEL = np.array([5, 5, 8])
-        Q_YAW = np.array([5, 5])
-        Q_OMEGA = np.array([0.1, 0.1, 0.1])
-        R_U = np.array([0.05, 0.05, 0.05, 0.05])
-        ocp.cost.cost_type = "NONLINEAR_LS"
-        ocp.cost.cost_type_e = "NONLINEAR_LS"
-        ocp.cost.W = np.diag(np.concatenate([Q_POS, Q_VEL, Q_YAW, Q_OMEGA, R_U]))
-        ocp.cost.W_e = np.diag(np.concatenate([50 * np.ones(3), 10 * np.ones(3), Q_YAW, Q_OMEGA]))
-        ocp.cost.yref = self._stage_yref(np.zeros(3), np.zeros(3), 0.0)
-        ocp.cost.yref_e = np.zeros(self.ny_e)
+        ocp.parameter_values = np.zeros(self.np)
+        ocp.cost.cost_type_0 = "EXTERNAL"
+        ocp.cost.cost_type = "EXTERNAL"
+        ocp.cost.cost_type_e = "EXTERNAL"
 
         ocp.constraints.x0 = np.zeros(self.nx)
         ocp.constraints.idxbu = np.arange(self.nu)
@@ -143,7 +172,7 @@ class AcadosNMPC:
         ocp.constraints.uh = np.array([MAX_ROLL, MAX_PITCH, MAX_P, MAX_Q, MAX_R])
 
         ocp.solver_options.qp_solver = "PARTIAL_CONDENSING_HPIPM"
-        ocp.solver_options.hessian_approx = "GAUSS_NEWTON"
+        ocp.solver_options.hessian_approx = "EXACT"
         ocp.solver_options.integrator_type = "ERK"
         ocp.solver_options.nlp_solver_type = "SQP_RTI"
         ocp.solver_options.sim_method_num_stages = 4
@@ -155,35 +184,12 @@ class AcadosNMPC:
             json_file="acados_codegen_quadrotor/quadrotor_acados_ocp.json",
         )
 
-    def _stage_yref(self, position_ref, velocity_ref, yaw_ref):
-        return np.concatenate([
-            position_ref,
-            velocity_ref,
-            np.array([np.sin(yaw_ref), np.cos(yaw_ref)]),
-            np.zeros(3),
-            np.ones(4) * self.T_hover,
-        ])
-
-    def _terminal_yref(self, position_ref, velocity_ref, yaw_ref):
-        return np.concatenate([
-            position_ref,
-            velocity_ref,
-            np.array([np.sin(yaw_ref), np.cos(yaw_ref)]),
-            np.zeros(3),
-        ])
+    def _reference_parameter(self, ref_horizon, k):
+        return np.concatenate([ref_horizon[0:3, k], ref_horizon[3:6, k], np.array([ref_horizon[6, k]])])
 
     def _set_references(self, ref_horizon):
-        for k in range(self.N):
-            self.solver.set(
-                k,
-                "yref",
-                self._stage_yref(ref_horizon[0:3, k], ref_horizon[3:6, k], ref_horizon[6, k]),
-            )
-        self.solver.set(
-            self.N,
-            "yref",
-            self._terminal_yref(ref_horizon[0:3, self.N], ref_horizon[3:6, self.N], ref_horizon[6, self.N]),
-        )
+        for k in range(self.N + 1):
+            self.solver.set(k, "p", self._reference_parameter(ref_horizon, k))
 
     def _set_initial_guess(self, current_state):
         if self.previous_U is None:
