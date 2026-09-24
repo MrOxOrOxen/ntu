@@ -2,8 +2,8 @@
 field AcadosOcpDims.N has been migrated to AcadosOcpOptions.N_horizon. setting AcadosOcpOptions.N_horizon = N. For future comppatibility, please use AcadosOcpOptions.N_horizon directly.
 /home/yjx/acados/interfaces/acados_template/acados_template/acados_code_gen_options.py:384: UserWarning: A path is provided for json_file. This is not supported. The json file will be written to the code_export_directory /home/yjx/mujoco_ws/project1/acados_codegen_quadrotor instead.
   warnings.warn(f"A path is provided for json_file. This is not supported. The json file will be written to the code_export_directory {self.code_export_directory} instead.")
-External functions generated in 12.780 ms.
-Templated solver code generated in 1164.175 ms.
+External functions generated in 15.440 ms.
+Templated solver code generated in 1141.614 ms.
 rm -f libacados_ocp_solver_ocp_quadrotor_acados_1f1c76a4.so
 rm -f quadrotor_acados_constraints/quadrotor_acados_constr_h_fun_jac_uxt_zt.o quadrotor_acados_constraints/quadrotor_acados_constr_h_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_0_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_0_fun_jac_ut_xt.o quadrotor_acados_cost/quadrotor_acados_cost_y_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_fun_jac_ut_xt.o quadrotor_acados_cost/quadrotor_acados_cost_y_e_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_e_fun_jac_ut_xt.o acados_solver_ocp_quadrotor_acados_1f1c76a4.o
 cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/acados -I/home/yjx/acados/include/blasfeo/include -I/home/yjx/acados/include/hpipm/include  -c -o quadrotor_acados_constraints/quadrotor_acados_constr_h_fun_jac_uxt_zt.o quadrotor_acados_constraints/quadrotor_acados_constr_h_fun_jac_uxt_zt.c
@@ -20,10 +20,10 @@ cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/ac
 cc -fPIC -std=c99   -O2 -I/home/yjx/acados/include -I/home/yjx/acados/include/acados -I/home/yjx/acados/include/blasfeo/include -I/home/yjx/acados/include/hpipm/include  -c -o quadrotor_acados_model/quadrotor_acados_expl_vde_adj.o quadrotor_acados_model/quadrotor_acados_expl_vde_adj.c
 cc -shared quadrotor_acados_constraints/quadrotor_acados_constr_h_fun_jac_uxt_zt.o quadrotor_acados_constraints/quadrotor_acados_constr_h_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_0_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_0_fun_jac_ut_xt.o quadrotor_acados_cost/quadrotor_acados_cost_y_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_fun_jac_ut_xt.o quadrotor_acados_cost/quadrotor_acados_cost_y_e_fun.o quadrotor_acados_cost/quadrotor_acados_cost_y_e_fun_jac_ut_xt.o acados_solver_ocp_quadrotor_acados_1f1c76a4.o quadrotor_acados_model/quadrotor_acados_expl_ode_fun.o quadrotor_acados_model/quadrotor_acados_expl_vde_forw.o quadrotor_acados_model/quadrotor_acados_expl_vde_adj.o -o libacados_ocp_solver_ocp_quadrotor_acados_1f1c76a4.so -L/home/yjx/acados/lib -lacados -lhpipm -lblasfeo -lm \
 -L -l
-Build completed in 835.765 ms.
+Build completed in 892.285 ms.
 acados was compiled without OpenMP.
 initial acados thrust = [3.06378929 2.88783311 3.53448958 3.48233564]
-initial acados solve time = 0.001458s
+initial acados solve time = 0.001242s
 t = 1.00s, acados thrust = [3.23805846 2.89227023 2.60561311 2.54753718]
 t = 2.00s, acados thrust = [2.81487219 2.77215303 3.13093299 2.36042508]
 t = 3.00s, acados thrust = [2.80219692 2.63091022 2.91633141 2.4986956 ]
@@ -89,9 +89,19 @@ acados mujoco simulation results
 position tracking rmse(m): [0.01361246 0.01343727 0.00892824]
 ekf position estimation rmse(m): [0.01035956 0.01083977 0.01071964]
 acados nmpc solver success rate: 1.0
-avg acados nmpc solve time(s): 0.0009907826569482544
-max acados nmpc solve time(s): 0.017103117001170176
+avg acados nmpc solve time(s): 0.0009547162922584559
+max acados nmpc solve time(s): 0.016098853000130475
 min rotor thrust(N): 1.53828011916271
 max rotor thrust(N): 4.62651753887929
+EKF 2-sigma coverage:
+x: coverage=98.13%, RMSE=0.010360, avg sigma=0.012423, RMSE/sigma=0.834
+y: coverage=97.35%, RMSE=0.010840, avg sigma=0.012409, RMSE/sigma=0.874
+z: coverage=97.72%, RMSE=0.010720, avg sigma=0.011879, RMSE/sigma=0.902
+vx: coverage=100.00%, RMSE=0.034155, avg sigma=0.063522, RMSE/sigma=0.538
+vy: coverage=99.90%, RMSE=0.033180, avg sigma=0.063350, RMSE/sigma=0.524
+vz: coverage=100.00%, RMSE=0.028504, avg sigma=0.056921, RMSE/sigma=0.501
+p: coverage=98.48%, RMSE=0.008563, avg sigma=0.010399, RMSE/sigma=0.823
+q: coverage=98.45%, RMSE=0.008570, avg sigma=0.010399, RMSE/sigma=0.824
+r: coverage=98.62%, RMSE=0.006781, avg sigma=0.008279, RMSE/sigma=0.819
 saved acados replay data to fig_acados/mujoco_replay_acados.json
 saved acados figures to fig_acados

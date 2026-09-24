@@ -850,13 +850,26 @@ ekf position estimation rmse(m): [0.01035888 0.01083914 0.01071967]
 
 nmpc solver success rate: 1.0
 
-avg nmpc solve time(s): 0.08943164568947037
+avg nmpc solve time(s): 0.09006978042880986
 
-max nmpc solve time(s): 0.8212251180011663
+max nmpc solve time(s): 0.8660459490000676
 
 min rotor thrust(N): 1.5587421882025614
 
 max rotor thrust(N): 4.592325659096391
+
+EKF 2-sigma coverage:
+
+x: coverage=98.13%, RMSE=0.010359, avg sigma=0.012423, RMSE/sigma=0.834
+y: coverage=97.35%, RMSE=0.010839, avg sigma=0.012409, RMSE/sigma=0.874
+z: coverage=97.72%, RMSE=0.010720, avg sigma=0.011879, RMSE/sigma=0.902
+vx: coverage=100.00%, RMSE=0.034147, avg sigma=0.063520, RMSE/sigma=0.538
+vy: coverage=99.90%, RMSE=0.033170, avg sigma=0.063347, RMSE/sigma=0.524
+vz: coverage=100.00%, RMSE=0.028504, avg sigma=0.056921, RMSE/sigma=0.501
+p: coverage=98.47%, RMSE=0.008563, avg sigma=0.010399, RMSE/sigma=0.823
+q: coverage=98.45%, RMSE=0.008570, avg sigma=0.010399, RMSE/sigma=0.824
+r: coverage=98.62%, RMSE=0.006781, avg sigma=0.008279, RMSE/sigma=0.819
+
 
 saved MuJoCo replay data to fig/mujoco_replay.json
 

@@ -25,6 +25,26 @@ R_ENU_FROM_NED = np.array([
     [0, 0, -1]
 ])
 
+TWO_SIGMA_STATE_INDICES = [0, 1, 2, 3, 4, 5, 10, 11, 12]
+TWO_SIGMA_STATE_NAMES = ["x", "y", "z", "vx", "vy", "vz", "p", "q", "r"]
+
+def compute_two_sigma_metrics(estimation_error_history, covariance_history):
+    sigma_history = np.sqrt(np.maximum(covariance_history, 0))
+    metrics = {}
+    for name, idx in zip(TWO_SIGMA_STATE_NAMES, TWO_SIGMA_STATE_INDICES):
+        error = estimation_error_history[:, idx]
+        sigma = sigma_history[:, idx]
+        coverage = np.mean(np.abs(error) <= 2 * sigma) * 100
+        rmse = np.sqrt(np.mean(error**2))
+        avg_sigma = np.mean(sigma)
+        metrics[name] = {
+            "coverage_percent": float(coverage),
+            "rmse": float(rmse),
+            "avg_sigma": float(avg_sigma),
+            "rmse_over_avg_sigma": float(rmse / avg_sigma) if avg_sigma > 0 else None,
+        }
+    return metrics
+
 def quat_to_rotation_matrix(q):
     qw, qx, qy, qz = q
     return np.array([
@@ -395,6 +415,7 @@ def main():
 
         tracking_rmse = np.sqrt(np.mean(position_tracking_error**2, axis=0))
         ekf_position_rmse = np.sqrt(np.mean(estimation_error[:, 0:3]**2, axis=0))
+        two_sigma_metrics = compute_two_sigma_metrics(estimation_error_history, covariance_history)
 
         print("\n")
         print("mujoco simulation results\n")
@@ -405,6 +426,16 @@ def main():
         print(f"max nmpc solve time(s): {np.max(nmpc_solve_times)}\n")
         print(f"min rotor thrust(N): {np.min(thrust_history)}\n")
         print(f"max rotor thrust(N): {np.max(thrust_history)}\n")
+        print("EKF 2-sigma coverage:\n")
+        for name in TWO_SIGMA_STATE_NAMES:
+            metric = two_sigma_metrics[name]
+            print(
+                f"{name}: coverage={metric['coverage_percent']:.2f}%, "
+                f"RMSE={metric['rmse']:.6f}, "
+                f"avg sigma={metric['avg_sigma']:.6f}, "
+                f"RMSE/sigma={metric['rmse_over_avg_sigma']:.3f}"
+            )
+        print("\n")
 
         replay_data = {
             "metadata": {
@@ -426,6 +457,7 @@ def main():
                 "nmpc_success_count": int(nmpc_success_count),
                 "avg_nmpc_solve_time": float(np.mean(nmpc_solve_times)) if nmpc_solve_times.size > 0 else None,
                 "max_nmpc_solve_time": float(np.max(nmpc_solve_times)) if nmpc_solve_times.size > 0 else None,
+                "ekf_two_sigma_metrics": two_sigma_metrics,
             },
             "time_history": time_history.tolist(),
             "true_history": true_history.tolist(),

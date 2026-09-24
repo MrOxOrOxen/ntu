@@ -30,6 +30,26 @@ from trajectory import TF, ref_traj
 OUTPUT_DIR = Path("fig_acados")
 REPLAY_JSON = OUTPUT_DIR / "mujoco_replay_acados.json"
 NMPC_ACADOS_INTERVAL = int(round(NMPC_ACADOS_DT / DT))
+TWO_SIGMA_STATE_INDICES = [0, 1, 2, 3, 4, 5, 10, 11, 12]
+TWO_SIGMA_STATE_NAMES = ["x", "y", "z", "vx", "vy", "vz", "p", "q", "r"]
+
+
+def compute_two_sigma_metrics(estimation_error_history, covariance_history):
+    sigma_history = np.sqrt(np.maximum(covariance_history, 0))
+    metrics = {}
+    for name, idx in zip(TWO_SIGMA_STATE_NAMES, TWO_SIGMA_STATE_INDICES):
+        error = estimation_error_history[:, idx]
+        sigma = sigma_history[:, idx]
+        coverage = np.mean(np.abs(error) <= 2 * sigma) * 100
+        rmse = np.sqrt(np.mean(error**2))
+        avg_sigma = np.mean(sigma)
+        metrics[name] = {
+            "coverage_percent": float(coverage),
+            "rmse": float(rmse),
+            "avg_sigma": float(avg_sigma),
+            "rmse_over_avg_sigma": float(rmse / avg_sigma) if avg_sigma > 0 else None,
+        }
+    return metrics
 
 
 def build_ref_horizon_acados(current_time):
@@ -50,6 +70,7 @@ def save_replay_json(
     nmpc_solve_times,
     nmpc_solve_count,
     nmpc_success_count,
+    two_sigma_metrics,
 ):
     replay_data = {
         "metadata": {
@@ -72,6 +93,7 @@ def save_replay_json(
             "nmpc_success_count": int(nmpc_success_count),
             "avg_nmpc_solve_time": float(np.mean(nmpc_solve_times)) if nmpc_solve_times.size > 0 else None,
             "max_nmpc_solve_time": float(np.max(nmpc_solve_times)) if nmpc_solve_times.size > 0 else None,
+            "ekf_two_sigma_metrics": two_sigma_metrics,
         },
         "time_history": time_history.tolist(),
         "true_history": true_history.tolist(),
@@ -308,8 +330,10 @@ def main():
     torque_history = np.array(torque_history)
     nmpc_solve_times = np.array(nmpc_solve_times)
 
+    estimation_error_history = true_history - estimate_history
     tracking_rmse = np.sqrt(np.mean((true_history[:, 0:3] - reference_history) ** 2, axis=0))
     ekf_position_rmse = np.sqrt(np.mean((true_history[:, 0:3] - estimate_history[:, 0:3]) ** 2, axis=0))
+    two_sigma_metrics = compute_two_sigma_metrics(estimation_error_history, covariance_history)
     print("\nacados mujoco simulation results")
     print(f"position tracking rmse(m): {tracking_rmse}")
     print(f"ekf position estimation rmse(m): {ekf_position_rmse}")
@@ -318,6 +342,15 @@ def main():
     print(f"max acados nmpc solve time(s): {np.max(nmpc_solve_times)}")
     print(f"min rotor thrust(N): {np.min(thrust_history)}")
     print(f"max rotor thrust(N): {np.max(thrust_history)}")
+    print("EKF 2-sigma coverage:")
+    for name in TWO_SIGMA_STATE_NAMES:
+        metric = two_sigma_metrics[name]
+        print(
+            f"{name}: coverage={metric['coverage_percent']:.2f}%, "
+            f"RMSE={metric['rmse']:.6f}, "
+            f"avg sigma={metric['avg_sigma']:.6f}, "
+            f"RMSE/sigma={metric['rmse_over_avg_sigma']:.3f}"
+        )
 
     save_replay_json(
         time_history,
@@ -326,6 +359,7 @@ def main():
         nmpc_solve_times,
         nmpc_solve_count,
         nmpc_success_count,
+        two_sigma_metrics,
     )
     save_figures(
         time_history,
