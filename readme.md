@@ -57,3 +57,43 @@ Convert the desired cart acceleration from the energy controller into the requir
 Demonstrate pendulum swing-up from the downward configuration and monitor the pendulum angle, pendulum energy and applied force.
 
 Compare different controller gains \(k\) and analyze their effects on energy regulation speed, control force and cart displacement.
+
+**## PBA3**
+
+This assignment contains the linearization, state-feedback control and swing-up and catch implementation of a nonlinear cart-pendulum system using MATLAB, Simulink and Stateflow.
+
+**Task 1: Jacobian Linearization**
+
+Linearize the nonlinear cart-pendulum system around the upright equilibrium using the Jacobian method.
+
+Derive the state-space matrices \(A\) and \(B\) analytically.
+
+**Task 2: Numerical Linearization Using linmod**
+
+Use the MATLAB `linmod` command to numerically linearize the nonlinear Simulink model at the upright equilibrium.
+
+Compare the eigenvalues obtained from `linmod` with the analytical results from Task 1 and verify their agreement.
+
+**Task 3: State-Feedback Controller Design**
+
+Design a state-feedback controller using pole placement to stabilize the linearized cart-pendulum system.
+
+Check system controllability, calculate the feedback gain matrix \(K\), and verify closed-loop stability through eigenvalue analysis.
+
+**Task 4: Nonlinear Closed-Loop Simulation**
+
+Implement the state-feedback controller on the nonlinear cart-pendulum model developed in PBA2.
+
+Simulate different initial conditions and demonstrate local asymptotic stability.
+
+Investigate the region of attraction by varying the initial pendulum angle and comparing convergent and non-convergent trajectories.
+
+**Task 5: Swing-Up and Catch Controller Using Stateflow**
+
+Combine the energy-based swing-up controller developed in PBA2 with the state-feedback balancing controller from Task 3.
+
+Implement controller switching using Stateflow and apply a force saturation limit of \(\pm14\) N.
+
+Evaluate the original PBA2 swing-up controller under force saturation and introduce a modified energy-based controller using a hyperbolic tangent function.
+
+Demonstrate successful swing-up and catch, and monitor the pendulum angle, cart position, pendulum energy, applied force and Stateflow controller mode.
