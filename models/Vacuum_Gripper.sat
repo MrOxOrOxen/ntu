@@ -1,0 +1,513 @@
+3600 0 4 0           
+15 RobotStudioIRC5 14 ACIS 36.0.1 NT 24 Thu Nov  5 10:49:55 2026 
+1000 1e-08 1e-10 
+T @77 MRVNNGA3PK4ZD8S4563TSHK2Z6FMTE7AWB9CJ85AFBPKRA6XECPBFENUJCN4MR6UADRBN67DUBGVK 
+body $4 -1 -1 $-1 0 $5 $-1 $6 T -0.040000000000000001 -0.040000000000000001 0 0.040000000000000001 0.040000000000000001 0.017999999999999999 #
+body $7 -1 -1 $-1 0 $8 $-1 $9 T -0.017999999999999999 -0.017999999999999999 0 0.017999999999999999 0.017999999999999999 0.13 #
+body $10 -1 -1 $-1 0 $11 $-1 $12 T -0.032000000000000001 -0.032000000000000001 0 0.032000000000000001 0.032000000000000001 0.025000000000000001 #
+body $13 -1 -1 $-1 0 $14 $-1 $15 T -0.025000000000000001 -0.025000000000000001 0 0.025000000000000001 0.025000000000000001 0.0070000000000000001 #
+rgb_color-st-attrib $-1 -1 $16 $-1 $0 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+lump $-1 -1 -1 $-1 $-1 $17 $0 T -0.040000000000000001 -0.040000000000000001 0 0.040000000000000001 0.040000000000000001 0.017999999999999999 #
+transform $-1 -1 1 0 0 0 1 0 0 0 1 0 0 0 1 no_rotate no_reflect no_shear #
+rgb_color-st-attrib $-1 -1 $18 $-1 $1 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+lump $-1 -1 -1 $-1 $-1 $19 $1 T -0.017999999999999999 -0.017999999999999999 0 0.017999999999999999 0.017999999999999999 0.13 #
+transform $-1 -1 1 0 0 0 1 0 0 0 1 0 0 0.017999999999999999 1 no_rotate no_reflect no_shear #
+rgb_color-st-attrib $-1 -1 $20 $-1 $2 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+lump $-1 -1 -1 $-1 $-1 $21 $2 T -0.032000000000000001 -0.032000000000000001 0 0.032000000000000001 0.032000000000000001 0.025000000000000001 #
+transform $-1 -1 1 0 0 0 1 0 0 0 1 0 0 0.14799999999999999 1 no_rotate no_reflect no_shear #
+rgb_color-st-attrib $-1 -1 $22 $-1 $3 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+lump $-1 -1 -1 $-1 $-1 $23 $3 T -0.025000000000000001 -0.025000000000000001 0 0.025000000000000001 0.025000000000000001 0.0070000000000000001 #
+transform $-1 -1 1 0 0 0 1 0 0 0 1 0 0 0.17299999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $24 $4 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+shell $-1 -1 -1 $-1 $-1 $-1 $25 $-1 $5 T -0.040000000000000001 -0.040000000000000001 0 0.040000000000000001 0.040000000000000001 0.017999999999999999 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $26 $7 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+shell $-1 -1 -1 $-1 $-1 $-1 $27 $-1 $8 T -0.017999999999999999 -0.017999999999999999 0 0.017999999999999999 0.017999999999999999 0.13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $28 $10 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+shell $-1 -1 -1 $-1 $-1 $-1 $29 $-1 $11 T -0.032000000000000001 -0.032000000000000001 0 0.032000000000000001 0.032000000000000001 0.025000000000000001 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $30 $13 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+shell $-1 -1 -1 $-1 $-1 $-1 $31 $-1 $14 T -0.025000000000000001 -0.025000000000000001 0 0.025000000000000001 0.025000000000000001 0.0070000000000000001 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $32 $16 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+face $33 -1 -1 $-1 $34 $35 $17 $-1 $36 forward single T -0.040000000000000001 -0.040000000000000001 0 0.040000000000000001 0.040000000000000001 0.017999999999999999 F #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $37 $18 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+face $38 -1 -1 $-1 $39 $40 $19 $-1 $41 forward single T -0.017999999999999999 -0.017999999999999999 0 0.017999999999999999 0.017999999999999999 0.13 F #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $42 $20 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+face $43 -1 -1 $-1 $44 $45 $21 $-1 $46 forward single T -0.032000000000000001 -0.032000000000000001 0 0.032000000000000001 0.032000000000000001 0.025000000000000001 F #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $47 $22 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+face $48 -1 -1 $-1 $49 $50 $23 $-1 $51 forward single T -0.025000000000000001 -0.025000000000000001 0 0.025000000000000001 0.025000000000000001 0.0070000000000000001 F #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $52 $24 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+rgb_color-st-attrib $-1 -1 $53 $-1 $25 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+face $54 -1 -1 $-1 $55 $56 $17 $-1 $57 forward single T -0.040000000000000001 -0.040000000000000001 0 0.040000000000000001 0.040000000000000001 0 F #
+loop $-1 -1 -1 $-1 $58 $59 $25 T -0.040000000000000001 -0.040000000000000001 0 0.040000000000000001 0.040000000000000001 0 unknown #
+cone-surface $-1 -1 -1 $-1 0 0 0.0089999999999999993 0 0 1 0.040000000000000001 0 0 1 I I 0 1 0.040000000000000001 forward I I I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $60 $26 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+rgb_color-st-attrib $-1 -1 $61 $-1 $27 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+face $62 -1 -1 $-1 $63 $64 $19 $-1 $65 forward single T -0.017999999999999999 -0.017999999999999999 0 0.017999999999999999 0.017999999999999999 0 F #
+loop $-1 -1 -1 $-1 $66 $67 $27 T -0.017999999999999999 -0.017999999999999999 0 0.017999999999999999 0.017999999999999999 0 unknown #
+cone-surface $-1 -1 -1 $-1 0 0 0.065000000000000002 0 0 1 0.017999999999999999 0 0 1 I I 0 1 0.017999999999999999 forward I I I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $68 $28 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+rgb_color-st-attrib $-1 -1 $69 $-1 $29 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+face $70 -1 -1 $-1 $71 $72 $21 $-1 $73 forward single T -0.032000000000000001 -0.032000000000000001 0 0.032000000000000001 0.032000000000000001 0 F #
+loop $-1 -1 -1 $-1 $74 $75 $29 T -0.032000000000000001 -0.032000000000000001 0 0.032000000000000001 0.032000000000000001 0 unknown #
+cone-surface $-1 -1 -1 $-1 0 0 0.012500000000000001 0 0 1 0.032000000000000001 0 0 1 I I 0 1 0.032000000000000001 forward I I I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $76 $30 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+rgb_color-st-attrib $-1 -1 $77 $-1 $31 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+face $78 -1 -1 $-1 $79 $80 $23 $-1 $81 forward single T -0.025000000000000001 -0.025000000000000001 0 0.025000000000000001 0.025000000000000001 0 F #
+loop $-1 -1 -1 $-1 $82 $83 $31 T -0.025000000000000001 -0.025000000000000001 0 0.025000000000000001 0.025000000000000001 0 unknown #
+cone-surface $-1 -1 -1 $-1 0 0 0.0035000000000000001 0 0 1 0.025000000000000001 0 0 1 I I 0 1 0.025000000000000001 forward I I I I #
+string_attrib-name_attrib-gen-attrib $-1 -1 $84 $32 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $85 $33 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+rgb_color-st-attrib $-1 -1 $86 $-1 $34 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+face $87 -1 -1 $-1 $-1 $88 $17 $-1 $89 forward single T -0.040000000000000001 -0.040000000000000001 0.017999999999999999 0.040000000000000001 0.040000000000000001 0.017999999999999999 F #
+loop $-1 -1 -1 $-1 $-1 $90 $34 T -0.040000000000000001 -0.040000000000000001 0 0.040000000000000001 0.040000000000000001 0 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 0 0 0 -1 -1 0 0 forward_v I I I I #
+loop $-1 -1 -1 $-1 $-1 $91 $25 T -0.040000000000000001 -0.040000000000000001 0.017999999999999999 0.040000000000000001 0.040000000000000001 0.017999999999999999 unknown #
+coedge $-1 -1 -1 $-1 $59 $59 $90 $92 reversed $35 $-1 #
+string_attrib-name_attrib-gen-attrib $-1 -1 $93 $37 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $94 $38 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+rgb_color-st-attrib $-1 -1 $95 $-1 $39 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+face $96 -1 -1 $-1 $-1 $97 $19 $-1 $98 forward single T -0.017999999999999999 -0.017999999999999999 0.13 0.017999999999999999 0.017999999999999999 0.13 F #
+loop $-1 -1 -1 $-1 $-1 $99 $39 T -0.017999999999999999 -0.017999999999999999 0 0.017999999999999999 0.017999999999999999 0 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 0 0 0 -1 -1 0 0 forward_v I I I I #
+loop $-1 -1 -1 $-1 $-1 $100 $27 T -0.017999999999999999 -0.017999999999999999 0.13 0.017999999999999999 0.017999999999999999 0.13 unknown #
+coedge $-1 -1 -1 $-1 $67 $67 $99 $101 reversed $40 $-1 #
+string_attrib-name_attrib-gen-attrib $-1 -1 $102 $42 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $103 $43 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+rgb_color-st-attrib $-1 -1 $104 $-1 $44 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+face $105 -1 -1 $-1 $-1 $106 $21 $-1 $107 forward single T -0.032000000000000001 -0.032000000000000001 0.025000000000000001 0.032000000000000001 0.032000000000000001 0.025000000000000001 F #
+loop $-1 -1 -1 $-1 $-1 $108 $44 T -0.032000000000000001 -0.032000000000000001 0 0.032000000000000001 0.032000000000000001 0 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 0 0 0 -1 -1 0 0 forward_v I I I I #
+loop $-1 -1 -1 $-1 $-1 $109 $29 T -0.032000000000000001 -0.032000000000000001 0.025000000000000001 0.032000000000000001 0.032000000000000001 0.025000000000000001 unknown #
+coedge $-1 -1 -1 $-1 $75 $75 $108 $110 reversed $45 $-1 #
+string_attrib-name_attrib-gen-attrib $-1 -1 $111 $47 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $112 $48 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+rgb_color-st-attrib $-1 -1 $113 $-1 $49 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+face $114 -1 -1 $-1 $-1 $115 $23 $-1 $116 forward single T -0.025000000000000001 -0.025000000000000001 0.0070000000000000001 0.025000000000000001 0.025000000000000001 0.0070000000000000001 F #
+loop $-1 -1 -1 $-1 $-1 $117 $49 T -0.025000000000000001 -0.025000000000000001 0 0.025000000000000001 0.025000000000000001 0 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 0 0 0 -1 -1 0 0 forward_v I I I I #
+loop $-1 -1 -1 $-1 $-1 $118 $31 T -0.025000000000000001 -0.025000000000000001 0.0070000000000000001 0.025000000000000001 0.025000000000000001 0.0070000000000000001 unknown #
+coedge $-1 -1 -1 $-1 $83 $83 $117 $119 reversed $50 $-1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $120 $52 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $121 $53 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $122 $54 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+rgb_color-st-attrib $-1 -1 $123 $-1 $55 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+loop $-1 -1 -1 $-1 $-1 $124 $55 T -0.040000000000000001 -0.040000000000000001 0.017999999999999999 0.040000000000000001 0.040000000000000001 0.017999999999999999 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 0.017999999999999999 0 0 1 1 0 0 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $90 $90 $59 $92 forward $56 $-1 #
+coedge $-1 -1 -1 $-1 $91 $91 $124 $125 reversed $58 $-1 #
+edge $-1 -1 -1 $-1 $126 0 $126 6.2831853071795862 $90 $127 forward @7 unknown T -0.040000000000000001 -0.040000000000000001 0 0.040000000000000001 0.040000000000000001 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $128 $60 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $129 $61 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $130 $62 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+rgb_color-st-attrib $-1 -1 $131 $-1 $63 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+loop $-1 -1 -1 $-1 $-1 $132 $63 T -0.017999999999999999 -0.017999999999999999 0.13 0.017999999999999999 0.017999999999999999 0.13 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 0.13 0 0 1 1 0 0 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $99 $99 $67 $101 forward $64 $-1 #
+coedge $-1 -1 -1 $-1 $100 $100 $132 $133 reversed $66 $-1 #
+edge $-1 -1 -1 $-1 $134 0 $134 6.2831853071795862 $99 $135 forward @7 unknown T -0.017999999999999999 -0.017999999999999999 0 0.017999999999999999 0.017999999999999999 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $136 $68 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $137 $69 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $138 $70 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+rgb_color-st-attrib $-1 -1 $139 $-1 $71 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+loop $-1 -1 -1 $-1 $-1 $140 $71 T -0.032000000000000001 -0.032000000000000001 0.025000000000000001 0.032000000000000001 0.032000000000000001 0.025000000000000001 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 0.025000000000000001 0 0 1 1 0 0 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $108 $108 $75 $110 forward $72 $-1 #
+coedge $-1 -1 -1 $-1 $109 $109 $140 $141 reversed $74 $-1 #
+edge $-1 -1 -1 $-1 $142 0 $142 6.2831853071795862 $108 $143 forward @7 unknown T -0.032000000000000001 -0.032000000000000001 0 0.032000000000000001 0.032000000000000001 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $144 $76 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $145 $77 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $146 $78 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+rgb_color-st-attrib $-1 -1 $147 $-1 $79 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.17647058823529413 0.29411764705882354 0.39215686274509803 #
+loop $-1 -1 -1 $-1 $-1 $148 $79 T -0.025000000000000001 -0.025000000000000001 0.0070000000000000001 0.025000000000000001 0.025000000000000001 0.0070000000000000001 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 0.0070000000000000001 0 0 1 1 0 0 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $117 $117 $83 $119 forward $80 $-1 #
+coedge $-1 -1 -1 $-1 $118 $118 $148 $149 reversed $82 $-1 #
+edge $-1 -1 -1 $-1 $150 0 $150 6.2831853071795862 $117 $151 forward @7 unknown T -0.025000000000000001 -0.025000000000000001 0 0.025000000000000001 0.025000000000000001 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $152 $84 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $153 $85 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $154 $86 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $155 $87 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+coedge $-1 -1 -1 $-1 $124 $124 $91 $125 forward $88 $-1 #
+edge $-1 -1 -1 $-1 $156 0 $156 6.2831853071795862 $124 $157 forward @7 unknown T -0.040000000000000001 -0.040000000000000001 0.017999999999999999 0.040000000000000001 0.040000000000000001 0.017999999999999999 #
+vertex $-1 -1 -1 $-1 $92 $158 #
+ellipse-curve $-1 -1 -1 $-1 0 0 0 0 0 -1 0.040000000000000001 0 0 1 I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $159 $93 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $160 $94 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $161 $95 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $162 $96 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+coedge $-1 -1 -1 $-1 $132 $132 $100 $133 forward $97 $-1 #
+edge $-1 -1 -1 $-1 $163 0 $163 6.2831853071795862 $132 $164 forward @7 unknown T -0.017999999999999999 -0.017999999999999999 0.13 0.017999999999999999 0.017999999999999999 0.13 #
+vertex $-1 -1 -1 $-1 $101 $165 #
+ellipse-curve $-1 -1 -1 $-1 0 0 0 0 0 -1 0.017999999999999999 0 0 1 I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $166 $102 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $167 $103 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $168 $104 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $169 $105 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+coedge $-1 -1 -1 $-1 $140 $140 $109 $141 forward $106 $-1 #
+edge $-1 -1 -1 $-1 $170 0 $170 6.2831853071795862 $140 $171 forward @7 unknown T -0.032000000000000001 -0.032000000000000001 0.025000000000000001 0.032000000000000001 0.032000000000000001 0.025000000000000001 #
+vertex $-1 -1 -1 $-1 $110 $172 #
+ellipse-curve $-1 -1 -1 $-1 0 0 0 0 0 -1 0.032000000000000001 0 0 1 I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $173 $111 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $174 $112 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $175 $113 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $176 $114 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+coedge $-1 -1 -1 $-1 $148 $148 $118 $149 forward $115 $-1 #
+edge $-1 -1 -1 $-1 $177 0 $177 6.2831853071795862 $148 $178 forward @7 unknown T -0.025000000000000001 -0.025000000000000001 0.0070000000000000001 0.025000000000000001 0.025000000000000001 0.0070000000000000001 #
+vertex $-1 -1 -1 $-1 $119 $179 #
+ellipse-curve $-1 -1 -1 $-1 0 0 0 0 0 -1 0.025000000000000001 0 0 1 I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $180 $120 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $181 $121 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $182 $122 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $183 $123 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+vertex $-1 -1 -1 $-1 $125 $184 #
+ellipse-curve $-1 -1 -1 $-1 0 0 0.017999999999999999 0 0 1 0.040000000000000001 0 0 1 I I #
+point $-1 -1 -1 $-1 0.040000000000000001 0 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $185 $128 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $186 $129 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $187 $130 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $188 $131 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+vertex $-1 -1 -1 $-1 $133 $189 #
+ellipse-curve $-1 -1 -1 $-1 0 0 0.13 0 0 1 0.017999999999999999 0 0 1 I I #
+point $-1 -1 -1 $-1 0.017999999999999999 0 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $190 $136 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $191 $137 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $192 $138 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $193 $139 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+vertex $-1 -1 -1 $-1 $141 $194 #
+ellipse-curve $-1 -1 -1 $-1 0 0 0.025000000000000001 0 0 1 0.032000000000000001 0 0 1 I I #
+point $-1 -1 -1 $-1 0.032000000000000001 0 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $195 $144 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $196 $145 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $197 $146 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $198 $147 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+vertex $-1 -1 -1 $-1 $149 $199 #
+ellipse-curve $-1 -1 -1 $-1 0 0 0.0070000000000000001 0 0 1 0.025000000000000001 0 0 1 I I #
+point $-1 -1 -1 $-1 0.025000000000000001 0 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $200 $152 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $201 $153 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $202 $154 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $203 $155 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+point $-1 -1 -1 $-1 0.040000000000000001 0 0.017999999999999999 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $204 $159 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $205 $160 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $206 $161 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $207 $162 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+point $-1 -1 -1 $-1 0.017999999999999999 0 0.13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $208 $166 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $209 $167 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $210 $168 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $211 $169 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+point $-1 -1 -1 $-1 0.032000000000000001 0 0.025000000000000001 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $212 $173 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $213 $174 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $214 $175 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $215 $176 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+point $-1 -1 -1 $-1 0.025000000000000001 0 0.0070000000000000001 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $216 $180 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $217 $181 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $218 $182 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $219 $183 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $220 $185 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $221 $186 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $222 $187 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $223 $188 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $224 $190 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $225 $191 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $226 $192 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $227 $193 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $228 $195 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $229 $196 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $230 $197 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $231 $198 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $232 $200 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $233 $201 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $234 $202 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $235 $203 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $236 $204 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $237 $205 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $238 $206 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $239 $207 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $240 $208 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $241 $209 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $242 $210 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $243 $211 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $244 $212 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $245 $213 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $246 $214 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $247 $215 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $248 $216 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $249 $217 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $250 $218 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $251 $219 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $252 $220 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $253 $221 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $254 $222 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $255 $223 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $256 $224 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $257 $225 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $258 $226 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $259 $227 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $260 $228 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $261 $229 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $262 $230 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $263 $231 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $264 $232 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $265 $233 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $266 $234 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $267 $235 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $268 $236 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $269 $237 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $270 $238 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $271 $239 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $272 $240 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $273 $241 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $274 $242 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $275 $243 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $276 $244 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $277 $245 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $278 $246 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $279 $247 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $280 $248 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $281 $249 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $282 $250 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $283 $251 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $284 $252 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $285 $253 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $286 $254 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $287 $255 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $288 $256 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $289 $257 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $290 $258 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $291 $259 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $292 $260 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $293 $261 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $294 $262 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $295 $263 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $296 $264 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $297 $265 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $298 $266 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $299 $267 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $300 $268 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $301 $269 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $302 $270 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $303 $271 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $304 $272 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $305 $273 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $306 $274 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $307 $275 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $308 $276 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $309 $277 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $310 $278 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $311 $279 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $312 $280 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $313 $281 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $314 $282 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $315 $283 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $316 $284 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $317 $285 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $318 $286 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $319 $287 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $320 $288 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $321 $289 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $322 $290 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $323 $291 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $324 $292 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $325 $293 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $326 $294 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $327 $295 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $328 $296 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $329 $297 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $330 $298 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $331 $299 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $332 $300 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $333 $301 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $334 $302 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $335 $303 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $336 $304 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $337 $305 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $338 $306 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $339 $307 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $340 $308 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $341 $309 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $342 $310 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $343 $311 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $344 $312 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $345 $313 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $346 $314 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $347 $315 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $348 $316 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $349 $317 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $350 $318 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $351 $319 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $352 $320 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $353 $321 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $354 $322 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $355 $323 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $356 $324 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $357 $325 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $358 $326 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $359 $327 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $360 $328 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $361 $329 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $362 $330 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $363 $331 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $364 $332 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $365 $333 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $366 $334 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $367 $335 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $368 $336 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $369 $337 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $370 $338 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $371 $339 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $372 $340 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $373 $341 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $374 $342 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $375 $343 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $376 $344 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $377 $345 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $378 $346 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $379 $347 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $380 $348 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $381 $349 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $382 $350 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $383 $351 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $384 $352 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $385 $353 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $386 $354 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $387 $355 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $388 $356 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $389 $357 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $390 $358 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $391 $359 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $392 $360 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $393 $361 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $394 $362 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $395 $363 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $396 $364 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $397 $365 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $398 $366 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $399 $367 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $400 $368 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $401 $369 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $402 $370 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $403 $371 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $404 $372 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $405 $373 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $406 $374 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $407 $375 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+string_attrib-name_attrib-gen-attrib $-1 -1 $408 $376 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $409 $377 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $410 $378 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $411 $379 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+string_attrib-name_attrib-gen-attrib $-1 -1 $412 $380 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $413 $381 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $414 $382 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $415 $383 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+string_attrib-name_attrib-gen-attrib $-1 -1 $416 $384 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $417 $385 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $418 $386 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $419 $387 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+string_attrib-name_attrib-gen-attrib $-1 -1 $420 $388 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $421 $389 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $422 $390 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $423 $391 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $424 $392 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $425 $393 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $426 $394 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $427 $395 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $428 $396 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $429 $397 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $430 $398 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $431 $399 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $432 $400 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $433 $401 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $434 $402 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $435 $403 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $436 $404 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $437 $405 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $438 $406 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $439 $407 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+string_attrib-name_attrib-gen-attrib $-1 -1 $440 $408 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $441 $409 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $442 $410 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $443 $411 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+string_attrib-name_attrib-gen-attrib $-1 -1 $444 $412 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $445 $413 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $446 $414 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $447 $415 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+string_attrib-name_attrib-gen-attrib $-1 -1 $448 $416 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $449 $417 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $450 $418 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $451 $419 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+string_attrib-name_attrib-gen-attrib $-1 -1 $452 $420 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $453 $421 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $454 $422 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $455 $423 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $456 $424 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $457 $425 $25 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $458 $426 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $459 $427 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $460 $428 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $461 $429 $27 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $462 $430 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $463 $431 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $464 $432 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $465 $433 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $466 $434 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $467 $435 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $468 $436 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $469 $437 $31 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $470 $438 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $471 $439 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+render-rbase-attrib $-1 -1 $472 $440 $0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $473 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0 1 no_rotate no_reflect no_shear #
+render-rbase-attrib $-1 -1 $-1 $441 $25 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $474 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $475 $442 $34 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $476 $443 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+render-rbase-attrib $-1 -1 $477 $444 $1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $478 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0.017999999999999999 1 no_rotate no_reflect no_shear #
+render-rbase-attrib $-1 -1 $-1 $445 $27 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $479 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0.017999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $480 $446 $39 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $481 $447 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+render-rbase-attrib $-1 -1 $482 $448 $2 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $483 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0.14799999999999999 1 no_rotate no_reflect no_shear #
+render-rbase-attrib $-1 -1 $-1 $449 $29 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $484 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0.14799999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $485 $450 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $486 $451 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+render-rbase-attrib $-1 -1 $487 $452 $3 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $488 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0.17299999999999999 1 no_rotate no_reflect no_shear #
+render-rbase-attrib $-1 -1 $-1 $453 $31 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $489 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0.17299999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $490 $454 $49 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 14 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $491 $455 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+vector_attrib-name_attrib-gen-attrib $-1 -1 $492 $456 $0 2 1 1 2 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 abb_primitive_size 0.040000000000000001 0.040000000000000001 0.017999999999999999 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $458 $34 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $493 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $494 $459 $55 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+vector_attrib-name_attrib-gen-attrib $-1 -1 $495 $460 $1 2 1 1 2 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 abb_primitive_size 0.017999999999999999 0.017999999999999999 0.13 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $462 $39 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $496 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0.017999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $497 $463 $63 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+vector_attrib-name_attrib-gen-attrib $-1 -1 $498 $464 $2 2 1 1 2 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 abb_primitive_size 0.032000000000000001 0.032000000000000001 0.025000000000000001 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $466 $44 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $499 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0.14799999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $500 $467 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+vector_attrib-name_attrib-gen-attrib $-1 -1 $501 $468 $3 2 1 1 2 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 abb_primitive_size 0.025000000000000001 0.025000000000000001 0.0070000000000000001 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $470 $49 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $502 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0.17299999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $503 $471 $79 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 15 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $472 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 abb_primitive_type 2 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $476 $55 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $504 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $477 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 abb_primitive_type 2 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $481 $63 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $505 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0.017999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $482 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 abb_primitive_type 2 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $486 $71 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $506 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0.14799999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $487 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 abb_primitive_type 2 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $491 $79 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $507 $-1 0 1 1 0 0 0 1 0 0 0 1 0 0 0.17299999999999999 1 no_rotate no_reflect no_shear #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.17647058823529413 0.29411764705882354 0.39215686274509803 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+End-of-ACIS-data 

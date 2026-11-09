@@ -1,0 +1,269 @@
+3600 0 2 0           
+15 RobotStudioIRC5 14 ACIS 36.0.1 NT 24 Mon Nov  9 13:26:05 2026 
+1000 1e-08 1e-10 
+T @77 QBY2P_UN2ASPWXZ4GKVRSXV949KMPM7V4C_CQX6U6AN4PG7EBDPUKR6DBCN4REQXJ8UBP6PEB8JVS 
+body $2 -1 -1 $-1 0 $3 $-1 $4 T 0 0 0 0.0080000000000000002 0.55000000000000004 0.11 #
+body $5 -1 -1 $-1 0 $6 $-1 $7 T 0 0 0 0.55000000000000004 0.0080000000000000002 0.11 #
+rgb_color-st-attrib $-1 -1 $8 $-1 $0 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.80000000000000004 0.65490196078431373 0.4392156862745098 #
+lump $-1 -1 -1 $-1 $-1 $9 $0 T 0 0 0 0.0080000000000000002 0.55000000000000004 0.11 #
+transform $-1 -1 1 0 0 0 1 0 0 0 1 0.93100000000000005 0.20999999999999999 0.29999999999999999 1 no_rotate no_reflect no_shear #
+rgb_color-st-attrib $-1 -1 $10 $-1 $1 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.80000000000000004 0.65490196078431373 0.4392156862745098 #
+lump $-1 -1 -1 $-1 $-1 $11 $1 T 0 0 0 0.55000000000000004 0.0080000000000000002 0.11 #
+transform $-1 -1 1 0 0 0 1 0 0 0 1 0.66000000000000003 0.48099999999999998 0.29999999999999999 1 no_rotate no_reflect no_shear #
+string_attrib-name_attrib-gen-attrib $-1 -1 $12 $2 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+shell $-1 -1 -1 $-1 $-1 $-1 $13 $-1 $3 T 0 0 0 0.0080000000000000002 0.55000000000000004 0.11 #
+string_attrib-name_attrib-gen-attrib $-1 -1 $14 $5 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+shell $-1 -1 -1 $-1 $-1 $-1 $15 $-1 $6 T 0 0 0 0.55000000000000004 0.0080000000000000002 0.11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $16 $8 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+face $17 -1 -1 $-1 $18 $19 $9 $-1 $20 forward single T 0 0 0.11 0.0080000000000000002 0.55000000000000004 0.11 F #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $21 $10 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+face $22 -1 -1 $-1 $23 $24 $11 $-1 $25 forward single T 0 0 0.11 0.55000000000000004 0.0080000000000000002 0.11 F #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $26 $12 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+rgb_color-st-attrib $-1 -1 $27 $-1 $13 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.80000000000000004 0.65490196078431373 0.4392156862745098 #
+face $28 -1 -1 $-1 $29 $30 $9 $-1 $31 reversed single T 0 0 0 0.0080000000000000002 0.55000000000000004 0 F #
+loop $-1 -1 -1 $-1 $-1 $32 $13 T 0 0 0.11 0.0080000000000000002 0.55000000000000004 0.11 unknown #
+plane-surface $-1 -1 -1 $-1 0.0040000000000000001 0.27500000000000002 0.11 0 0 1 1 0 0 forward_v I I I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $33 $14 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+rgb_color-st-attrib $-1 -1 $34 $-1 $15 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.80000000000000004 0.65490196078431373 0.4392156862745098 #
+face $35 -1 -1 $-1 $36 $37 $11 $-1 $38 reversed single T 0 0 0 0.55000000000000004 0.0080000000000000002 0 F #
+loop $-1 -1 -1 $-1 $-1 $39 $15 T 0 0 0.11 0.55000000000000004 0.0080000000000000002 0.11 unknown #
+plane-surface $-1 -1 -1 $-1 0.27500000000000002 0.0040000000000000001 0.11 0 0 1 1 0 0 forward_v I I I I #
+string_attrib-name_attrib-gen-attrib $-1 -1 $40 $16 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $41 $17 $13 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+rgb_color-st-attrib $-1 -1 $42 $-1 $18 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.80000000000000004 0.65490196078431373 0.4392156862745098 #
+face $43 -1 -1 $-1 $44 $45 $9 $-1 $46 reversed single T 0 0 0 0.0080000000000000002 0 0.11 F #
+loop $-1 -1 -1 $-1 $-1 $47 $18 T 0 0 0 0.0080000000000000002 0.55000000000000004 0 unknown #
+plane-surface $-1 -1 -1 $-1 0.0040000000000000001 0.27500000000000002 0 0 0 1 1 0 0 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $48 $49 $50 $51 forward $19 $-1 #
+string_attrib-name_attrib-gen-attrib $-1 -1 $52 $21 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @10 NameOfBody @0  #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $53 $22 $15 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+rgb_color-st-attrib $-1 -1 $54 $-1 $23 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.80000000000000004 0.65490196078431373 0.4392156862745098 #
+face $55 -1 -1 $-1 $56 $57 $11 $-1 $58 reversed single T 0 0 0 0.55000000000000004 0 0.11 F #
+loop $-1 -1 -1 $-1 $-1 $59 $23 T 0 0 0 0.55000000000000004 0.0080000000000000002 0 unknown #
+plane-surface $-1 -1 -1 $-1 0.27500000000000002 0.0040000000000000001 0 0 0 1 1 0 0 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $60 $61 $62 $63 forward $24 $-1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $64 $26 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $65 $27 $13 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $66 $28 $18 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+rgb_color-st-attrib $-1 -1 $67 $-1 $29 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.80000000000000004 0.65490196078431373 0.4392156862745098 #
+face $68 -1 -1 $-1 $69 $70 $9 $-1 $71 reversed single T 0 0 0 0 0.55000000000000004 0.11 F #
+loop $-1 -1 -1 $-1 $-1 $72 $29 T 0 0 0 0.0080000000000000002 0 0.11 unknown #
+plane-surface $-1 -1 -1 $-1 0.0040000000000000001 0 0.055 0 1 0 0 0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $73 $74 $75 $76 forward $30 $-1 #
+coedge $-1 -1 -1 $-1 $77 $32 $78 $79 forward $19 $-1 #
+coedge $-1 -1 -1 $-1 $32 $77 $80 $81 forward $19 $-1 #
+coedge $-1 -1 -1 $-1 $82 $83 $32 $51 reversed $84 $-1 #
+edge $-1 -1 -1 $-1 $85 -0.27500000000000002 $86 0.27500000000000002 $50 $87 forward @7 unknown T 0.0080000000000000002 0 0.11 0.0080000000000000002 0.55000000000000004 0.11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $88 $33 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 7 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $89 $34 $15 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $90 $35 $23 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+rgb_color-st-attrib $-1 -1 $91 $-1 $36 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.80000000000000004 0.65490196078431373 0.4392156862745098 #
+face $92 -1 -1 $-1 $93 $94 $11 $-1 $95 reversed single T 0 0 0 0 0.0080000000000000002 0.11 F #
+loop $-1 -1 -1 $-1 $-1 $96 $36 T 0 0 0 0.55000000000000004 0 0.11 unknown #
+plane-surface $-1 -1 -1 $-1 0.27500000000000002 0 0.055 0 1 0 0 0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $97 $98 $99 $100 forward $37 $-1 #
+coedge $-1 -1 -1 $-1 $101 $39 $102 $103 forward $24 $-1 #
+coedge $-1 -1 -1 $-1 $39 $101 $104 $105 forward $24 $-1 #
+coedge $-1 -1 -1 $-1 $106 $107 $39 $63 reversed $108 $-1 #
+edge $-1 -1 -1 $-1 $109 -0.0040000000000000001 $110 0.0040000000000000001 $62 $111 forward @7 unknown T 0.55000000000000004 0 0.11 0.55000000000000004 0.0080000000000000002 0.11 #
+render-rbase-attrib $-1 -1 $112 $40 $0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $113 $-1 0 1 1 0 0 0 1 0 0 0 1 0.93100000000000005 0.20999999999999999 0.29999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $114 $41 $13 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $115 $42 $18 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $116 $43 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+rgb_color-st-attrib $-1 -1 $117 $-1 $44 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.80000000000000004 0.65490196078431373 0.4392156862745098 #
+face $118 -1 -1 $-1 $119 $120 $9 $-1 $121 reversed single T 0 0.55000000000000004 0 0.0080000000000000002 0.55000000000000004 0.11 F #
+loop $-1 -1 -1 $-1 $-1 $122 $44 T 0 0 0 0 0.55000000000000004 0.11 unknown #
+plane-surface $-1 -1 -1 $-1 0 0.27500000000000002 0.055 1 0 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $123 $80 $124 $125 forward $45 $-1 #
+coedge $-1 -1 -1 $-1 $126 $47 $123 $127 forward $30 $-1 #
+coedge $-1 -1 -1 $-1 $47 $126 $128 $129 forward $30 $-1 #
+coedge $-1 -1 -1 $-1 $83 $82 $47 $76 reversed $84 $-1 #
+edge $-1 -1 -1 $-1 $130 -0.27500000000000002 $131 0.27500000000000002 $75 $132 forward @7 unknown T 0.0080000000000000002 0 0 0.0080000000000000002 0.55000000000000004 0 #
+coedge $-1 -1 -1 $-1 $49 $48 $133 $134 forward $19 $-1 #
+coedge $-1 -1 -1 $-1 $135 $136 $48 $79 reversed $120 $-1 #
+edge $-1 -1 -1 $-1 $86 -0.0040000000000000001 $137 0.0040000000000000001 $78 $138 forward @7 unknown T 0 0.55000000000000004 0.11 0.0080000000000000002 0.55000000000000004 0.11 #
+coedge $-1 -1 -1 $-1 $72 $139 $49 $81 reversed $45 $-1 #
+edge $-1 -1 -1 $-1 $140 -0.0040000000000000001 $85 0.0040000000000000001 $80 $141 forward @7 unknown T 0 0 0.11 0.0080000000000000002 0 0.11 #
+coedge $-1 -1 -1 $-1 $75 $50 $139 $142 forward $84 $-1 #
+coedge $-1 -1 -1 $-1 $50 $75 $135 $143 reversed $84 $-1 #
+loop $-1 -1 -1 $-1 $-1 $82 $119 T 0.0080000000000000002 0 0 0.0080000000000000002 0.55000000000000004 0.11 unknown #
+vertex $-1 -1 -1 $-1 $51 $144 #
+vertex $-1 -1 -1 $-1 $51 $145 #
+straight-curve $-1 -1 -1 $-1 0.0080000000000000002 0.27500000000000002 0.11 0 1 0 1 I I #
+render-rbase-attrib $-1 -1 $146 $52 $1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $147 $-1 0 1 1 0 0 0 1 0 0 0 1 0.66000000000000003 0.48099999999999998 0.29999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $148 $53 $15 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 8 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $149 $54 $23 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $150 $55 $36 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+rgb_color-st-attrib $-1 -1 $151 $-1 $56 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.80000000000000004 0.65490196078431373 0.4392156862745098 #
+face $152 -1 -1 $-1 $153 $154 $11 $-1 $155 reversed single T 0 0.0080000000000000002 0 0.55000000000000004 0.0080000000000000002 0.11 F #
+loop $-1 -1 -1 $-1 $-1 $156 $56 T 0 0 0 0 0.0080000000000000002 0.11 unknown #
+plane-surface $-1 -1 -1 $-1 0 0.0040000000000000001 0.055 1 0 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $157 $104 $158 $159 forward $57 $-1 #
+coedge $-1 -1 -1 $-1 $160 $59 $157 $161 forward $37 $-1 #
+coedge $-1 -1 -1 $-1 $59 $160 $162 $163 forward $37 $-1 #
+coedge $-1 -1 -1 $-1 $107 $106 $59 $100 reversed $108 $-1 #
+edge $-1 -1 -1 $-1 $164 -0.0040000000000000001 $165 0.0040000000000000001 $99 $166 forward @7 unknown T 0.55000000000000004 0 0 0.55000000000000004 0.0080000000000000002 0 #
+coedge $-1 -1 -1 $-1 $61 $60 $167 $168 forward $24 $-1 #
+coedge $-1 -1 -1 $-1 $169 $170 $60 $103 reversed $154 $-1 #
+edge $-1 -1 -1 $-1 $110 -0.27500000000000002 $171 0.27500000000000002 $102 $172 forward @7 unknown T 0 0.0080000000000000002 0.11 0.55000000000000004 0.0080000000000000002 0.11 #
+coedge $-1 -1 -1 $-1 $96 $173 $61 $105 reversed $57 $-1 #
+edge $-1 -1 -1 $-1 $174 -0.27500000000000002 $109 0.27500000000000002 $104 $175 forward @7 unknown T 0 0 0.11 0.55000000000000004 0 0.11 #
+coedge $-1 -1 -1 $-1 $99 $62 $173 $176 forward $108 $-1 #
+coedge $-1 -1 -1 $-1 $62 $99 $169 $177 reversed $108 $-1 #
+loop $-1 -1 -1 $-1 $-1 $106 $153 T 0.55000000000000004 0 0 0.55000000000000004 0.0080000000000000002 0.11 unknown #
+vertex $-1 -1 -1 $-1 $63 $178 #
+vertex $-1 -1 -1 $-1 $63 $179 #
+straight-curve $-1 -1 -1 $-1 0.55000000000000004 0.0040000000000000001 0.11 0 1 0 1 I I #
+vector_attrib-name_attrib-gen-attrib $-1 -1 $180 $64 $0 2 1 1 2 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 abb_primitive_size 0.0080000000000000002 0.55000000000000004 0.11 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.80000000000000004 0.65490196078431373 0.4392156862745098 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $65 $13 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $181 $-1 0 1 1 0 0 0 1 0 0 0 1 0.93100000000000005 0.20999999999999999 0.29999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $182 $66 $18 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 2 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $183 $67 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $184 $68 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+rgb_color-st-attrib $-1 -1 $185 $-1 $69 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.80000000000000004 0.65490196078431373 0.4392156862745098 #
+face $186 -1 -1 $-1 $-1 $84 $9 $-1 $187 reversed single T 0.0080000000000000002 0 0 0.0080000000000000002 0.55000000000000004 0.11 F #
+loop $-1 -1 -1 $-1 $-1 $135 $69 T 0 0.55000000000000004 0 0.0080000000000000002 0.55000000000000004 0.11 unknown #
+plane-surface $-1 -1 -1 $-1 0.0040000000000000001 0.55000000000000004 0.055 0 -1 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $188 $133 $136 $189 forward $70 $-1 #
+coedge $-1 -1 -1 $-1 $139 $72 $73 $127 reversed $45 $-1 #
+coedge $-1 -1 -1 $-1 $133 $188 $72 $125 reversed $70 $-1 #
+edge $-1 -1 -1 $-1 $140 -0.055 $190 0.055 $124 $191 forward @7 unknown T 0 0 0 0 0 0.11 #
+coedge $-1 -1 -1 $-1 $74 $73 $188 $192 forward $30 $-1 #
+edge $-1 -1 -1 $-1 $131 -0.0040000000000000001 $190 0.0040000000000000001 $123 $193 forward @7 unknown T 0 0 0 0.0080000000000000002 0 0 #
+coedge $-1 -1 -1 $-1 $136 $135 $74 $129 reversed $120 $-1 #
+edge $-1 -1 -1 $-1 $194 -0.0040000000000000001 $130 0.0040000000000000001 $128 $195 forward @7 unknown T 0 0.55000000000000004 0 0.0080000000000000002 0.55000000000000004 0 #
+vertex $-1 -1 -1 $-1 $76 $196 #
+vertex $-1 -1 -1 $-1 $142 $197 #
+straight-curve $-1 -1 -1 $-1 0.0080000000000000002 0.27500000000000002 0 0 -1 0 1 I I #
+coedge $-1 -1 -1 $-1 $122 $124 $77 $134 reversed $70 $-1 #
+edge $-1 -1 -1 $-1 $137 -0.27500000000000002 $140 0.27500000000000002 $133 $198 forward @7 unknown T 0 0 0.11 0 0.55000000000000004 0.11 #
+coedge $-1 -1 -1 $-1 $128 $78 $83 $143 forward $120 $-1 #
+coedge $-1 -1 -1 $-1 $78 $128 $122 $189 reversed $120 $-1 #
+vertex $-1 -1 -1 $-1 $79 $199 #
+straight-curve $-1 -1 -1 $-1 0.0040000000000000001 0.55000000000000004 0.11 -1 0 0 1 I I #
+coedge $-1 -1 -1 $-1 $80 $123 $82 $142 reversed $45 $-1 #
+vertex $-1 -1 -1 $-1 $134 $200 #
+straight-curve $-1 -1 -1 $-1 0.0040000000000000001 0 0.11 1 0 0 1 I I #
+edge $-1 -1 -1 $-1 $85 -0.055 $131 0.055 $82 $201 forward @7 unknown T 0.0080000000000000002 0 0 0.0080000000000000002 0 0.11 #
+edge $-1 -1 -1 $-1 $86 -0.055 $130 0.055 $83 $202 forward @7 unknown T 0.0080000000000000002 0.55000000000000004 0 0.0080000000000000002 0.55000000000000004 0.11 #
+point $-1 -1 -1 $-1 0.0080000000000000002 0 0.11 #
+point $-1 -1 -1 $-1 0.0080000000000000002 0.55000000000000004 0.11 #
+vector_attrib-name_attrib-gen-attrib $-1 -1 $203 $88 $1 2 1 1 2 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 abb_primitive_size 0.55000000000000004 0.0080000000000000002 0.11 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.80000000000000004 0.65490196078431373 0.4392156862745098 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $89 $15 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $204 $-1 0 1 1 0 0 0 1 0 0 0 1 0.66000000000000003 0.48099999999999998 0.29999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $205 $90 $23 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $206 $91 $36 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $207 $92 $56 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+rgb_color-st-attrib $-1 -1 $208 $-1 $93 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.80000000000000004 0.65490196078431373 0.4392156862745098 #
+face $209 -1 -1 $-1 $-1 $108 $11 $-1 $210 reversed single T 0.55000000000000004 0 0 0.55000000000000004 0.0080000000000000002 0.11 F #
+loop $-1 -1 -1 $-1 $-1 $169 $93 T 0 0.0080000000000000002 0 0.55000000000000004 0.0080000000000000002 0.11 unknown #
+plane-surface $-1 -1 -1 $-1 0.27500000000000002 0.0080000000000000002 0.055 0 -1 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $211 $167 $170 $212 forward $94 $-1 #
+coedge $-1 -1 -1 $-1 $173 $96 $97 $161 reversed $57 $-1 #
+coedge $-1 -1 -1 $-1 $167 $211 $96 $159 reversed $94 $-1 #
+edge $-1 -1 -1 $-1 $174 -0.055 $213 0.055 $158 $214 forward @7 unknown T 0 0 0 0 0 0.11 #
+coedge $-1 -1 -1 $-1 $98 $97 $211 $215 forward $37 $-1 #
+edge $-1 -1 -1 $-1 $165 -0.27500000000000002 $213 0.27500000000000002 $157 $216 forward @7 unknown T 0 0 0 0.55000000000000004 0 0 #
+coedge $-1 -1 -1 $-1 $170 $169 $98 $163 reversed $154 $-1 #
+edge $-1 -1 -1 $-1 $217 -0.27500000000000002 $164 0.27500000000000002 $162 $218 forward @7 unknown T 0 0.0080000000000000002 0 0.55000000000000004 0.0080000000000000002 0 #
+vertex $-1 -1 -1 $-1 $100 $219 #
+vertex $-1 -1 -1 $-1 $176 $220 #
+straight-curve $-1 -1 -1 $-1 0.55000000000000004 0.0040000000000000001 0 0 -1 0 1 I I #
+coedge $-1 -1 -1 $-1 $156 $158 $101 $168 reversed $94 $-1 #
+edge $-1 -1 -1 $-1 $171 -0.0040000000000000001 $174 0.0040000000000000001 $167 $221 forward @7 unknown T 0 0 0.11 0 0.0080000000000000002 0.11 #
+coedge $-1 -1 -1 $-1 $162 $102 $107 $177 forward $154 $-1 #
+coedge $-1 -1 -1 $-1 $102 $162 $156 $212 reversed $154 $-1 #
+vertex $-1 -1 -1 $-1 $103 $222 #
+straight-curve $-1 -1 -1 $-1 0.27500000000000002 0.0080000000000000002 0.11 -1 0 0 1 I I #
+coedge $-1 -1 -1 $-1 $104 $157 $106 $176 reversed $57 $-1 #
+vertex $-1 -1 -1 $-1 $168 $223 #
+straight-curve $-1 -1 -1 $-1 0.27500000000000002 0 0.11 1 0 0 1 I I #
+edge $-1 -1 -1 $-1 $109 -0.055 $165 0.055 $106 $224 forward @7 unknown T 0.55000000000000004 0 0 0.55000000000000004 0 0.11 #
+edge $-1 -1 -1 $-1 $110 -0.055 $164 0.055 $107 $225 forward @7 unknown T 0.55000000000000004 0.0080000000000000002 0 0.55000000000000004 0.0080000000000000002 0.11 #
+point $-1 -1 -1 $-1 0.55000000000000004 0 0.11 #
+point $-1 -1 -1 $-1 0.55000000000000004 0.0080000000000000002 0.11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $112 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 abb_primitive_type 1 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.80000000000000004 0.65490196078431373 0.4392156862745098 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $115 $18 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $226 $-1 0 1 1 0 0 0 1 0 0 0 1 0.93100000000000005 0.20999999999999999 0.29999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $227 $116 $29 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 3 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $228 $117 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $229 $118 $69 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+rgb_color-st-attrib $-1 -1 $230 $-1 $119 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.80000000000000004 0.65490196078431373 0.4392156862745098 #
+plane-surface $-1 -1 -1 $-1 0.0080000000000000002 0.27500000000000002 0.055 -1 0 0 0 0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $124 $122 $126 $192 reversed $70 $-1 #
+edge $-1 -1 -1 $-1 $137 -0.055 $194 0.055 $136 $231 forward @7 unknown T 0 0.55000000000000004 0 0 0.55000000000000004 0.11 #
+vertex $-1 -1 -1 $-1 $192 $232 #
+straight-curve $-1 -1 -1 $-1 0 0 0.055 0 0 -1 1 I I #
+edge $-1 -1 -1 $-1 $190 -0.27500000000000002 $194 0.27500000000000002 $188 $233 forward @7 unknown T 0 0 0 0 0.55000000000000004 0 #
+straight-curve $-1 -1 -1 $-1 0.0040000000000000001 0 0 -1 0 0 1 I I #
+vertex $-1 -1 -1 $-1 $129 $234 #
+straight-curve $-1 -1 -1 $-1 0.0040000000000000001 0.55000000000000004 0 1 0 0 1 I I #
+point $-1 -1 -1 $-1 0.0080000000000000002 0.55000000000000004 0 #
+point $-1 -1 -1 $-1 0.0080000000000000002 0 0 #
+straight-curve $-1 -1 -1 $-1 0 0.27500000000000002 0.11 0 -1 0 1 I I #
+point $-1 -1 -1 $-1 0 0.55000000000000004 0.11 #
+point $-1 -1 -1 $-1 0 0 0.11 #
+straight-curve $-1 -1 -1 $-1 0.0080000000000000002 0 0.055 0 0 -1 1 I I #
+straight-curve $-1 -1 -1 $-1 0.0080000000000000002 0.55000000000000004 0.055 0 0 -1 1 I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $146 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 abb_primitive_type 1 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.80000000000000004 0.65490196078431373 0.4392156862745098 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $149 $23 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $235 $-1 0 1 1 0 0 0 1 0 0 0 1 0.66000000000000003 0.48099999999999998 0.29999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $236 $150 $36 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 10 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $237 $151 $56 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $238 $152 $93 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+rgb_color-st-attrib $-1 -1 $239 $-1 $153 2 1 2 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0.80000000000000004 0.65490196078431373 0.4392156862745098 #
+plane-surface $-1 -1 -1 $-1 0.55000000000000004 0.0040000000000000001 0.055 -1 0 0 0 0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $158 $156 $160 $215 reversed $94 $-1 #
+edge $-1 -1 -1 $-1 $171 -0.055 $217 0.055 $170 $240 forward @7 unknown T 0 0.0080000000000000002 0 0 0.0080000000000000002 0.11 #
+vertex $-1 -1 -1 $-1 $215 $241 #
+straight-curve $-1 -1 -1 $-1 0 0 0.055 0 0 -1 1 I I #
+edge $-1 -1 -1 $-1 $213 -0.0040000000000000001 $217 0.0040000000000000001 $211 $242 forward @7 unknown T 0 0 0 0 0.0080000000000000002 0 #
+straight-curve $-1 -1 -1 $-1 0.27500000000000002 0 0 -1 0 0 1 I I #
+vertex $-1 -1 -1 $-1 $163 $243 #
+straight-curve $-1 -1 -1 $-1 0.27500000000000002 0.0080000000000000002 0 1 0 0 1 I I #
+point $-1 -1 -1 $-1 0.55000000000000004 0.0080000000000000002 0 #
+point $-1 -1 -1 $-1 0.55000000000000004 0 0 #
+straight-curve $-1 -1 -1 $-1 0 0.0040000000000000001 0.11 0 -1 0 1 I I #
+point $-1 -1 -1 $-1 0 0.0080000000000000002 0.11 #
+point $-1 -1 -1 $-1 0 0 0.11 #
+straight-curve $-1 -1 -1 $-1 0.55000000000000004 0 0.055 0 0 -1 1 I I #
+straight-curve $-1 -1 -1 $-1 0.55000000000000004 0.0080000000000000002 0.055 0 0 -1 1 I I #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.80000000000000004 0.65490196078431373 0.4392156862745098 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $183 $29 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $244 $-1 0 1 1 0 0 0 1 0 0 0 1 0.93100000000000005 0.20999999999999999 0.29999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $245 $184 $44 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 4 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $246 $185 $69 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $247 $186 $119 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+straight-curve $-1 -1 -1 $-1 0 0.55000000000000004 0.055 0 0 -1 1 I I #
+point $-1 -1 -1 $-1 0 0 0 #
+straight-curve $-1 -1 -1 $-1 0 0.27500000000000002 0 0 1 0 1 I I #
+point $-1 -1 -1 $-1 0 0.55000000000000004 0 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.80000000000000004 0.65490196078431373 0.4392156862745098 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $206 $36 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $248 $-1 0 1 1 0 0 0 1 0 0 0 1 0.66000000000000003 0.48099999999999998 0.29999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $249 $207 $56 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $250 $208 $93 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $251 $209 $153 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+straight-curve $-1 -1 -1 $-1 0 0.0080000000000000002 0.055 0 0 -1 1 I I #
+point $-1 -1 -1 $-1 0 0 0 #
+straight-curve $-1 -1 -1 $-1 0 0.0040000000000000001 0 0 1 0 1 I I #
+point $-1 -1 -1 $-1 0 0.0080000000000000002 0 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.80000000000000004 0.65490196078431373 0.4392156862745098 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $228 $44 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $252 $-1 0 1 1 0 0 0 1 0 0 0 1 0.93100000000000005 0.20999999999999999 0.29999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $253 $229 $69 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 5 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $254 $230 $119 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.80000000000000004 0.65490196078431373 0.4392156862745098 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $237 $56 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $255 $-1 0 1 1 0 0 0 1 0 0 0 1 0.66000000000000003 0.48099999999999998 0.29999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $256 $238 $93 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 12 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $257 $239 $153 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.80000000000000004 0.65490196078431373 0.4392156862745098 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $246 $69 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $258 $-1 0 1 1 0 0 0 1 0 0 0 1 0.93100000000000005 0.20999999999999999 0.29999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $259 $247 $119 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 6 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.80000000000000004 0.65490196078431373 0.4392156862745098 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $250 $93 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $260 $-1 0 1 1 0 0 0 1 0 0 0 1 0.66000000000000003 0.48099999999999998 0.29999999999999999 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $261 $251 $153 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @15 PersistentGfxID 13 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.80000000000000004 0.65490196078431373 0.4392156862745098 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $254 $119 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $262 $-1 0 1 1 0 0 0 1 0 0 0 1 0.93100000000000005 0.20999999999999999 0.29999999999999999 1 no_rotate no_reflect no_shear #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.80000000000000004 0.65490196078431373 0.4392156862745098 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+render-rbase-attrib $-1 -1 $-1 $257 $153 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 $263 $-1 0 1 1 0 0 0 1 0 0 0 1 0.66000000000000003 0.48099999999999998 0.29999999999999999 1 no_rotate no_reflect no_shear #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.80000000000000004 0.65490196078431373 0.4392156862745098 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+rh_material-rh_entity $-1 -1 4 5 @5 plain @5 color -4 0.80000000000000004 0.65490196078431373 0.4392156862745098 @5 phong @14 ambient factor -2 1 @14 diffuse factor -2 1 @15 specular factor -2 0.75 @8 exponent -2 30 @14 specular color -4 1 1 1 @4 none @5 plain @5 color -4 1 1 1 #
+End-of-ACIS-data 
